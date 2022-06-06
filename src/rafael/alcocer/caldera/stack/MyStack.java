@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 /**
  * This is an example of an implementation of the Java classes Stack and Deque
- * (ArrayDeque) with the push methods.
+ * (ArrayDeque) with the push and pop methods.
  * 
  * They use LIFO Last in First Out.
  * 

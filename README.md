@@ -39,6 +39,11 @@ I wanted to have a series of exercises that are asked in interviews.
     
 <br />
 
+- MyStackTest
+    - Create a Custom Stack that works like Stack and Deque (ArrayDeque) classes with the push and pop methods.
+
+<br />
+
 - Exercise00CreateStreams
     - Several ways to create a Stream.
     
