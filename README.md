@@ -33,9 +33,8 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise04AnagramImperativeProgramming
     - Write a function that takes in an array of strings as its argument and then print all the anagrams found in the array. 
-    - INPUT: {"eat", "tea", "funeral", "raza", "frog", "elvis", "real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun",
-			"lives", "deudora", "dog", "ate", "eduardo", "zara"}
-    - OUTPUT: [tea, ate, raza, lives, deudora, funeral, eat, real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun, eduardo, elvis, zara]
+       - INPUT: {"eat", "tea", "funeral", "raza", "frog", "elvis", "real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun", "lives", "deudora", "dog", "ate", "eduardo", "zara"}
+       - OUTPUT: [tea, ate, raza, lives, deudora, funeral, eat, real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun, eduardo, elvis, zara]
     
 <br />
 
@@ -51,15 +50,15 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise01ArraysStream
     - From an array of strings, print only the strings that start with 'S' in ascending order uppercased.
-    - INPUT: { "Steve", "Svetlana", "sara", "John", "paul" }
-    - OUTPUT: SARA STEVE SVETLANA
+       - INPUT: { "Steve", "Svetlana", "sara", "John", "paul" }
+       - OUTPUT: SARA STEVE SVETLANA
     
 <br />
 
 - Exercise02ArraysStream
     - Square each number in an array and print the average.
-    - INPUT: { 2, 4, 6, 8, 10 }
-    - OUTPUT: 44.0
+       - INPUT: { 2, 4, 6, 8, 10 }
+       - OUTPUT: 44.0
     
 <br />
 
@@ -67,10 +66,58 @@ I wanted to have a series of exercises that are asked in interviews.
     -  The following exercise comes from:
        [Letter Count Test](https://www.codingame.com/playgrounds/20782/java-guild-meeting-52018/streams---practice)
     - Now, starting again from a list of names, give me the total number of letters in all the names with more than 5 letters.
-    - INPUT: { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney",
-			"Hubert" }
-    - OUTPUT: 34
+        - INPUT: { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney", "Hubert" }
+        - OUTPUT: 34
 
+<br />
+
+- Exercise10IntStream
+    - Print the int numbers from 1 to 9 and from 1 to 10.
+    
+<br />
+
+- Exercise11IntStream
+    - From an int range of numbers from 1 to 10, print from 6 to 10. This means to skip the first 5 numbers.
+        - OUTPUT:
+         - 6
+         - 7
+         - 8
+         - 9
+         - 10
+    
+    
+<br />
+
+- Exercise12IntStream
+    - Sum numbers from 1 to 4.
+        - OUTPUT: 10
+
+<br />
+
+- Exercise13IntStream
+    - Example of IntSummaryStatistics:
+       - double average = summary.getAverage();
+       - long count = summary.getCount();
+       - int max = summary.getMax();
+       - int min = summary.getMin();
+       - long sum = summary.getSum();
+
+<br />
+
+- Exercise14IntStream
+    - Get the minimum number from an array
+       - INPUT: { 100, 50, 56, 22, 3, 66 }
+       - OUTPUT: 3
+
+<br />
+
+- Exercise15IntStream
+    - Find 3 distinct smallest numbers from an array.
+       - INPUT: { 100, 50, 56, 22, 3, 66 }
+       - OUTPUT: 
+          - 3
+          - 13
+          - 22
 
 ## License
 
