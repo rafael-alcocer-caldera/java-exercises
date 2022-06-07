@@ -119,6 +119,16 @@ I wanted to have a series of exercises that are asked in interviews.
           - 13
           - 22
 
+- Exercise20Palindrome
+    - Several ways to check if a String is a Palindrome.
+       - Input String: "abcdf"
+       - Reversed String: "fdcba"
+       - OUTPUT: false
+       <br />
+       - Input String: "reconocer"
+       - Reversed String: "reconocer"
+       - OUTPUT: true
+
 ## License
 
 All work is under Apache 2.0 license
