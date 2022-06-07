@@ -123,7 +123,7 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise01Palindrome
     - Several ways to check if a String is a Palindrome.
-       - Input String: "abcdf"
+       - INPUT String: "abcdf"
        - Reversed String: "fdcba"
        - OUTPUT: false
        <br />
@@ -135,8 +135,20 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise02Palindrome
     - Find the longest palindrome within a string..
-       - Input String: "abcdfhreconocerhyhduracer"
+       - INPUT String: "abcdfhreconocerhyhduracer"
        - OUTPUT: hreconocerh
+
+<br />
+
+- Exercise20Stream
+    - From a list of numbers count those that are greater than 20 after after applying the square to each number.
+       - INPUT: 1, 2, 3, 4, 5, 6
+       - OUTPUT: 2
+
+- Exercise21Stream
+    - From a list of doubles get the average from those that are greater than 100.
+       - INPUT: 100.50, 200.45, 300.90, 37.56
+       - OUTPUT: 200.61666666666665
 
 ## License
 
