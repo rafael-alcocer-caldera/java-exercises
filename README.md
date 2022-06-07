@@ -119,7 +119,9 @@ I wanted to have a series of exercises that are asked in interviews.
           - 13
           - 22
 
-- Exercise20Palindrome
+<br />
+
+- Exercise01Palindrome
     - Several ways to check if a String is a Palindrome.
        - Input String: "abcdf"
        - Reversed String: "fdcba"
@@ -128,6 +130,13 @@ I wanted to have a series of exercises that are asked in interviews.
        - Input String: "reconocer"
        - Reversed String: "reconocer"
        - OUTPUT: true
+
+<br />
+
+- Exercise02Palindrome
+    - Find the longest palindrome within a string..
+       - Input String: "abcdfhreconocerhyhduracer"
+       - OUTPUT: hreconocerh
 
 ## License
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package rafael.alcocer.caldera.streams;
+package rafael.alcocer.caldera.palindrome;
 
 import java.util.ArrayDeque;
 import java.util.Collections;
@@ -24,46 +24,46 @@ import java.util.stream.Collectors;
 /**
  * Several ways to check if a String is a Palindrome.
  */
-public class Exercise20Palindrome {
+public class Exercise01Palindrome {
 	
 	private static final String S1 = "abcdf";
 	private static final String S2 = "reconocer";
 
     public static void main(String[] args) {
-        Exercise20Palindrome x = new Exercise20Palindrome();
+        Exercise01Palindrome x = new Exercise01Palindrome();
         
-        System.out.println(x.palindromeWithStringBuilder(S1));
-        
-        System.out.println("-------------------------------");
-        
-        System.out.println(x.palindromeWithStringBuilder(S2));
+        System.out.println(x.isPalindromeWithStringBuilder(S1));
         
         System.out.println("-------------------------------");
         
-        System.out.println(x.palindromeWithDeque(S1));
+        System.out.println(x.isPalindromeWithStringBuilder(S2));
         
         System.out.println("-------------------------------");
         
-        System.out.println(x.palindromeWithDeque(S2));
+        System.out.println(x.isPalindromeWithDeque(S1));
         
         System.out.println("-------------------------------");
         
-        System.out.println(x.palindromeWithCollectionsReverse(S1));
+        System.out.println(x.isPalindromeWithDeque(S2));
         
         System.out.println("-------------------------------");
         
-        System.out.println(x.palindromeWithCollectionsReverse(S2));
+        System.out.println(x.isPalindromeWithCollectionsReverse(S1));
         
         System.out.println("-------------------------------");
         
-        System.out.println(x.palindromeWithCollectionsReverse2(S1));
+        System.out.println(x.isPalindromeWithCollectionsReverse(S2));
         
         System.out.println("-------------------------------");
         
-        System.out.println(x.palindromeWithCollectionsReverse2(S2));
+        System.out.println(x.isPalindromeWithCollectionsReverse2(S1));
+        
+        System.out.println("-------------------------------");
+        
+        System.out.println(x.isPalindromeWithCollectionsReverse2(S2));
     }
 
-    public boolean palindromeWithStringBuilder(String s) {
+    public boolean isPalindromeWithStringBuilder(String s) {
     	System.out.println("Palindrome With StringBuilder:");
     	System.out.println("Input String: " + s);
     	
@@ -79,7 +79,7 @@ public class Exercise20Palindrome {
         return false;
     }
     
-    public boolean palindromeWithDeque(String s) {
+    public boolean isPalindromeWithDeque(String s) {
     	System.out.println("Palindrome With Deque:");
     	System.out.println("Input String: " + s);
     	
@@ -102,7 +102,7 @@ public class Exercise20Palindrome {
         return false;
     }
     
-    public boolean palindromeWithCollectionsReverse(String s) {
+    public boolean isPalindromeWithCollectionsReverse(String s) {
     	System.out.println("Palindrome With Collections reverse:");
     	System.out.println("Input String: " + s);
     	
@@ -126,7 +126,7 @@ public class Exercise20Palindrome {
         return false;
     }
     
-    public boolean palindromeWithCollectionsReverse2(String s) {
+    public boolean isPalindromeWithCollectionsReverse2(String s) {
     	System.out.println("Palindrome With Collections reverse 2:");
     	System.out.println("Input String: " + s);
     	
