@@ -183,7 +183,7 @@ I wanted to have a series of exercises that are asked in interviews.
 <br />
 
 - Exercise25Stream
-    -  Write a program to print employee details working in each department
+    -  Write a program to print employee details working in each department.
        - INPUT:
          - Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
          - Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
@@ -231,6 +231,23 @@ I wanted to have a series of exercises that are asked in interviews.
            Salary: 75500.3
            Status: active
            ]
+<br />
+
+- Exercise26Stream
+    -  Write a program to print employees count working in each department.
+       - INPUT:
+         - Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
+         - Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
+         - Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
+         - Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
+         - Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+         - Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
+       - OUTPUT:
+         - 500-----1
+         - 100-----3
+         - 300-----2
+         - -----
+         - {500=1, 100=3, 300=2}
 
 ## License
 
