@@ -164,6 +164,22 @@ I wanted to have a series of exercises that are asked in interviews.
        - INPUT: "Carl", "Ben", "Ana"
        - OUPUT: "Ana"
 
+<br />
+
+- Exercise24Stream
+    - From a list of employees get the names of the top 3 with most higher salary.
+       - INPUT:
+         - Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
+         - Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
+         - Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
+         - Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
+         - Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+       - OUTPUT:
+         - Emp5
+         - Emp4
+         - Emp1
+
+
 ## License
 
 All work is under Apache 2.0 license
