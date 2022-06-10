@@ -367,6 +367,78 @@ I wanted to have a series of exercises that are asked in interviews.
 
 ***     
 
+- Exercise29Stream
+    - Write a program to print Max/Min employee salary from the given collection.
+      - INPUT:
+         - Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
+         - Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
+         - Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
+         - Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
+         - Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+         - Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
+       - OUTPUT:
+         - Employee:
+         - Id: 5
+         - Name: Emp5
+         - Department Id: 500
+         - Salary: 88500.45
+         - Status: active
+         - 
+         - Employee:
+         - Id: 1
+         - Name: Emp1
+         - Department Id: 100
+         - Salary: 50000.6
+         - Status: active
+         - 
+         - Employee:
+         - Id: 4
+         - Name: Emp4
+         - Department Id: 300
+         - Salary: 75500.3
+         - Status: active
+         - 
+         -
+         - {500=Optional[Employee:
+         - Id: 5
+         - Name: Emp5
+         - Department Id: 500
+         - Salary: 88500.45
+         - Status: active
+         - ], 100=Optional[Employee:
+         - Id: 1
+         - Name: Emp1
+         - Department Id: 100
+         - Salary: 50000.6
+         - Status: active
+         - ], 300=Optional[Employee:
+         - Id: 4
+         - Name: Emp4
+         - Department Id: 300
+         - Salary: 75500.3
+         - Status: active
+         - ]}        
+
+***
+
+- Exercise30Stream
+    - Count the number of occurrences of words in an array..
+      - INPUT:
+        - "six", "one", "two", "three", "one", "six", "five", "six", "one", "six"
+      - OUTPUT:
+        - {six=4, one=3, five=1, three=1, two=1}
+        
+***
+
+- Exercise31Stream
+    - Count the number of occurrences of letters in a String.
+      - INPUT:
+        - "abcdekyrfadcelmaaafdghjkdsda"
+      - OUTPUT:
+        - {a=6, b=1, c=2, d=5, e=2, f=2, g=1, h=1, j=1, k=2, l=1, m=1, r=1, s=1, y=1}
+
+***
+
 ## License
 
 All work is under Apache 2.0 license

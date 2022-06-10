@@ -16,12 +16,14 @@
 package rafael.alcocer.caldera.streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * PROBLEM: Write a program to print active and inactive employees in the given collection.
+ * PROBLEM: Write a program to print the max salary of an employee from each department.
  * 
  * INPUT:
  * 
@@ -39,91 +41,57 @@ import java.util.stream.Collectors;
  * 
  * SOLUTION:
  * 
- * Collect the employees, group them by status and return them.
+ * Collect employees and group them by department and compare their salary.
  * 
  * OUTPUT:
  * 
- * inactive-----[Employee:
- * Id: 2
- * Name: Emp2
- * Department Id: 100
- * Salary: 30500.75
- * Status: inactive
- * , Employee:
- * Id: 3
- * Name: Emp3
- * Department Id: 300
- * Salary: 45500.85
- * Status: inactive
- * ]
- * active-----[Employee:
- * Id: 1
- * Name: Emp1
- * Department Id: 100
- * Salary: 50000.6
- * Status: active
- * , Employee:
- * Id: 4
- * Name: Emp4
- * Department Id: 300
- * Salary: 75500.3
- * Status: active
- * , Employee:
+ * Employee:
  * Id: 5
  * Name: Emp5
  * Department Id: 500
  * Salary: 88500.45
  * Status: active
- * , Employee:
- * Id: 6
- * Name: Emp6
+ *
+ * Employee:
+ * Id: 1
+ * Name: Emp1
  * Department Id: 100
- * Salary: 22690.33
+ * Salary: 50000.6
  * Status: active
- * ]
+ * 
+ * Employee:
+ * Id: 4
+ * Name: Emp4
+ * Department Id: 300
+ * Salary: 75500.3
+ * Status: active
+ * 
  * ------
- * {inactive=[Employee:
- * Id: 2
- * Name: Emp2
- * Department Id: 100
- * Salary: 30500.75
- * Status: inactive
- * , Employee:
- * Id: 3
- * Name: Emp3
- * Department Id: 300
- * Salary: 45500.85
- * Status: inactive
- * ], active=[Employee:
- * Id: 1
- * Name: Emp1
- * Department Id: 100
- * Salary: 50000.6
- * Status: active
- * , Employee:
- * Id: 4
- * Name: Emp4
- * Department Id: 300
- * Salary: 75500.3
- * Status: active
- * , Employee:
+ * 
+ * {500=Optional[Employee:
  * Id: 5
  * Name: Emp5
  * Department Id: 500
  * Salary: 88500.45
  * Status: active
- * , Employee:
- * Id: 6
- * Name: Emp6
+ * ], 100=Optional[Employee:
+ * Id: 1
+ * Name: Emp1
  * Department Id: 100
- * Salary: 22690.33
+ * Salary: 50000.6
+ * Status: active
+ * ], 300=Optional[Employee:
+ * Id: 4
+ * Name: Emp4
+ * Department Id: 300
+ * Salary: 75500.3
  * Status: active
  * ]}
  */
-public class Exercise27Stream {
+public class Exercise29Stream {
 
     public static void main(String[] args) {
-        Exercise27Stream x = new Exercise27Stream();
+        Exercise29Stream x = new Exercise29Stream();
         x.go();
         System.out.println("------");
         x.go2();
@@ -133,16 +101,20 @@ public class Exercise27Stream {
         List<Employee> employees = generateEmployees();
         
         employees.stream()
-            .collect(Collectors.groupingBy(Employee::getStatus))
+            .collect(Collectors.groupingBy(Employee::getDeptId))
             .entrySet()
-            .forEach(entry -> System.out.println(entry.getKey() + "-----" + entry.getValue()));
+            .stream()
+            .map(entry -> entry.getValue().stream().max(Comparator.comparingDouble(Employee::getSalary)).get())
+            .collect(Collectors.toList())
+            .stream()
+            .forEach(System.out::println);
     }
     
     public void go2() {
         List<Employee> employees = generateEmployees();
         
-        Map<String, List<Employee>> map = employees.stream()
-            .collect(Collectors.groupingBy(Employee::getStatus));
+        Map<Integer, Optional<Employee>> map = employees.stream()
+            .collect(Collectors.groupingBy(Employee::getDeptId, Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
         
         System.out.println(map);
     }
