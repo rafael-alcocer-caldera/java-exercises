@@ -34,6 +34,8 @@ import java.util.List;
  * 
  * Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
  * 
+ * Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
+ * 
  * SOLUTION:
  * 
  * 1. Sort the list with salaries.
@@ -96,7 +98,8 @@ public class Exercise24Stream {
 		Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
 		Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
 		Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+		Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
 
-		return Arrays.asList(e1, e2, e3, e4, e5);
+		return Arrays.asList(e1, e2, e3, e4, e5, e6);
 	}
 }
