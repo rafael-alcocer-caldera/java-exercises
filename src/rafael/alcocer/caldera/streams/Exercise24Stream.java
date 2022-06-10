@@ -74,8 +74,10 @@ public class Exercise24Stream {
 	public void goNewSchool() {
 		List<Employee> employees = generateEmployees();
 
-		employees.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).limit(3)
-				.forEach(e -> System.out.println(e.getName()));
+		employees.stream()
+			.sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+			.limit(3)
+			.forEach(e -> System.out.println(e.getName()));
 	}
 
 	/**
