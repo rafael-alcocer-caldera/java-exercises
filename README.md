@@ -145,10 +145,24 @@ I wanted to have a series of exercises that are asked in interviews.
        - INPUT: 1, 2, 3, 4, 5, 6
        - OUTPUT: 2
 
+<br />
+
 - Exercise21Stream
     - From a list of doubles get the average from those that are greater than 100.
        - INPUT: 100.50, 200.45, 300.90, 37.56
        - OUTPUT: 200.61666666666665
+
+<br />
+
+- Exercise22Stream
+    - This exercise only shows what exactly the lambda expression is creating.
+
+<br />
+
+- Exercise23Stream
+    - From a list of names, find the first one sorted in ascending order.
+       - INPUT: "Carl", "Ben", "Ana"
+       - OUPUT: "Ana"
 
 ## License
 
