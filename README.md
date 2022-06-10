@@ -339,6 +339,34 @@ I wanted to have a series of exercises that are asked in interviews.
 
 *** 
 
+- Exercise28Stream
+    - Write a program to print Max/Min employee salary from the given collection.
+      - INPUT:
+         - Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
+         - Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
+         - Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
+         - Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
+         - Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+         - Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
+       - OUTPUT:
+         - ##### Max Employee Salary #####
+         - Employee:
+         - Id: 5
+         - Name: Emp5
+         - Department Id: 500
+         - Salary: 88500.45
+         - Status: active
+         -
+         - ##### Min Employee Salary #####
+         - Employee:
+         - Id: 6
+         - Name: Emp6
+         - Department Id: 100
+         - Salary: 22690.33
+         - Status: active
+
+***     
+
 ## License
 
 All work is under Apache 2.0 license
