@@ -439,6 +439,15 @@ I wanted to have a series of exercises that are asked in interviews.
 
 ***
 
+- Exercise32Stream
+    - Sum the numbers using reduce.
+      - INPUT:
+        - 7.3, 5.2, 8.8
+      - OUTPUT:
+        - 21.3
+
+***
+
 ## License
 
 All work is under Apache 2.0 license
