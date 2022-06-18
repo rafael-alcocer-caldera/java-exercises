@@ -21,6 +21,10 @@ import java.util.stream.Collectors;
 
 /**
  * From a list of doubles get the average from those that are greater than 100.
+ * 
+ * INPUT: 100.50, 200.45, 300.90, 37.56
+ * 
+ * OUTPUT: 200.61666666666665
  */
 public class Exercise21Stream {
 

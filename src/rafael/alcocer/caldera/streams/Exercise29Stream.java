@@ -39,10 +39,6 @@ import java.util.stream.Collectors;
  * 
  * Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
  * 
- * SOLUTION:
- * 
- * Collect employees and group them by department and compare their salary.
- * 
  * OUTPUT:
  * 
  * Employee:
@@ -87,6 +83,10 @@ import java.util.stream.Collectors;
  * Salary: 75500.3
  * Status: active
  * ]}
+ * 
+ * SOLUTION:
+ * 
+ * Collect employees and group them by department and compare their salary.
  */
 public class Exercise29Stream {
 

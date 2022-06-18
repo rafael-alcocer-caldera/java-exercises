@@ -37,10 +37,6 @@ import java.util.stream.Collectors;
  * 
  * Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
  * 
- * SOLUTION:
- * 
- * Collect the employees, group them by status and return them.
- * 
  * OUTPUT:
  * 
  * inactive-----[Employee:
@@ -119,6 +115,10 @@ import java.util.stream.Collectors;
  * Salary: 22690.33
  * Status: active
  * ]}
+ * 
+ * SOLUTION:
+ * 
+ * Collect the employees, group them by status and return them.
  */
 public class Exercise27Stream {
 

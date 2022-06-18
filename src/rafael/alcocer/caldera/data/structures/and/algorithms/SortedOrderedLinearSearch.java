@@ -23,6 +23,8 @@ import java.util.stream.IntStream;
  * have to scan the complete array to see if the element is there in the given
  * array or not.
  * 
+ * EXPECTED RESULT: We want the index of the data searched.
+ * 
  * Before sort: NUMS = { 8, 1, 13, 15, 7 }
  * 
  * After Sort: NUMS = { 1, 7, 8, 13, 15 }
@@ -37,6 +39,8 @@ public class SortedOrderedLinearSearch {
 		System.out.println("Sorted Ordered Linear Search Old School");
 		System.out.println("---------------------------------------");
 		System.out.println(x.searchOldSchool(NUMS, 13));
+		
+		System.out.println("");
 		
 		System.out.println("Sorted Ordered Linear Search New School");
 		System.out.println("---------------------------------------");

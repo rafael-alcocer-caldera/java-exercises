@@ -21,6 +21,9 @@ import java.util.Arrays;
  * From a list of names, give me the total number of letters in all the names
  * with more than 5 letters.
  * 
+ * INPUT: { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney",
+			"Hubert" }
+ * 
  * OUTPUT: 34
  */
 public class Exercise03ArraysStream {

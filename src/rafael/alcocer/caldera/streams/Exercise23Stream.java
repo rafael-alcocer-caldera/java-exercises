@@ -19,6 +19,10 @@ import java.util.stream.Stream;
 
 /**
  * From a list of names, find the first one sorted in ascending order.
+ * 
+ * INPUT: "Carl", "Ben", "Ana"
+ * 
+ * OUTPUT: Ana
  */
 public class Exercise23Stream {
 

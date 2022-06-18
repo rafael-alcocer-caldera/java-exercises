@@ -41,13 +41,19 @@ public class BinarySearch {
 		System.out.println("--------------------------------------");
 		System.out.println(x.binarySearchIterativeImplementation(NUMS, 7));
 		
+		System.out.println("");
+		
 		System.out.println("Binary Search Recursive Implementation");
 		System.out.println("--------------------------------------");
 		System.out.println(x.binarySearchRecursiveImplementation(NUMS, 0, 4, 7));
 		
+		System.out.println("");
+		
 		System.out.println("Binary Search With Arrays");
 		System.out.println("-------------------------");
 		System.out.println(x.binarySearchWithArrays(NUMS, 7));
+		
+		System.out.println("");
 		
 		System.out.println("Binary Search With Collections");
 		System.out.println("------------------------------");

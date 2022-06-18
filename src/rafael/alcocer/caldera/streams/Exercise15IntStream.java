@@ -20,7 +20,10 @@ import java.util.stream.IntStream;
 
 /**
  * PROBLEM: Find 3 distinct smallest numbers from an array.
- *
+ * 
+ * INPUT: {100, 50, 56, 22, 3, 66, 200, 24, 13,3}
+ * 
+ * OUTPUT: 3, 13, 22
  */
 public class Exercise15IntStream {
 	

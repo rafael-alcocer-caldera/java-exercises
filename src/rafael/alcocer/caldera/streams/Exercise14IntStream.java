@@ -19,8 +19,11 @@ import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;
 
 /**
- * PROBLEM: Get the minimum number from an array
- *
+ * PROBLEM: Get the minimum number from an array.
+ * 
+ * INPUT: { 100, 50, 56, 22, 3, 66 }
+ * 
+ * OUTPUT: 3
  */
 public class Exercise14IntStream {
 

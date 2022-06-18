@@ -36,12 +36,6 @@ import java.util.List;
  * 
  * Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
  * 
- * SOLUTION:
- * 
- * 1. Sort the list with salaries.
- * 
- * 2. Limit to 3
- * 
  * OUTPUT:
  * 
  * Emp5
@@ -49,6 +43,12 @@ import java.util.List;
  * Emp4
  * 
  * Emp1
+ * 
+ * SOLUTION:
+ * 
+ * 1. Sort the list with salaries.
+ * 
+ * 2. Limit to 3
  */
 public class Exercise24Stream {
 

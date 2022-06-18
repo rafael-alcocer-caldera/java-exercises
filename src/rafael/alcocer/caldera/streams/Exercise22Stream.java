@@ -24,7 +24,6 @@ import java.util.stream.Stream;
 
 /**
  * This exercise only shows what exactly the lambda expression is creating.
- *
  */
 public class Exercise22Stream {
 

@@ -24,7 +24,6 @@ import java.util.stream.IntStream;
  * 
  * Range: 1 to 10
  * 
- * 
  * OUTPUT: 6 7 8 9 10
  */
 public class Exercise11IntStream {

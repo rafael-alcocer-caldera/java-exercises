@@ -24,11 +24,11 @@ import java.util.List;
  * 
  * INPUT: 1, 2, 3, 4, 5, 6
  * 
+ * OUTPUT: 2
+ * 
  * After square: 1, 4, 9, 16, 25, 36
  * 
  * Only 25, 36 are greater than 20, this means 2 numbers from the list.
- * 
- * OUTPUT: 2
  */
 public class Exercise20Stream {
 

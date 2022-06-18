@@ -36,10 +36,6 @@ import java.util.List;
  * 
  * Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
  * 
- * SOLUTION:
- * 
- * Use the same list of employees to get the min and max.
- * 
  * OUTPUT:
  * ##### Max Employee Salary #####
  * Employee:
@@ -56,6 +52,10 @@ import java.util.List;
  * Department Id: 100
  * Salary: 22690.33
  * Status: active
+ * 
+ * SOLUTION:
+ * 
+ * Use the same list of employees to get the min and max.
  */
 public class Exercise28Stream {
 

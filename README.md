@@ -448,6 +448,27 @@ I wanted to have a series of exercises that are asked in interviews.
 
 ***
 
+- UnorderedLinearSearch
+    - Let us assume we are given an array where the order of the elements is not known. That means the elements of the array are not sorted. In this case, to search for an element we have to scan the complete array and see if the element is there in the given list or not.
+      - EXPECTED RESULT: We want the index of the data searched.
+        - INPUT: 
+          - { 8, 1, 13, 15, 7 }
+        - If data = 13
+        - OUTPUT: 
+          - 2
+
+***
+
+- SortedOrderedLinearSearch
+    - If the elements of the array are already sorted, then in many cases we don’t have to scan the complete array to see if the element is there in the given array or not.
+      - EXPECTED RESULT: We want the index of the data searched.
+        - Before sort: NUMS = { 8, 1, 13, 15, 7 }
+        - After Sort: NUMS = { 1, 7, 8, 13, 15 }
+          - OUTPUT: 
+            - 2
+
+***
+
 ## License
 
 All work is under Apache 2.0 license

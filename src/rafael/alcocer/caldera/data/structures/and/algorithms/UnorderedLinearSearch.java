@@ -24,6 +24,12 @@ import java.util.stream.IntStream;
  * the element is there in the given list or not.
  * 
  * EXPECTED RESULT: We want the index of the data searched.
+ * 
+ * INPUT: { 8, 1, 13, 15, 7 }
+ * 
+ * If data = 13
+ * 
+ * OUTPUT: 2
  */
 public class UnorderedLinearSearch {
 
@@ -35,6 +41,8 @@ public class UnorderedLinearSearch {
 		System.out.println("Unordered Linear Search Old School");
 		System.out.println("----------------------------------");
 		System.out.println(x.searchOldSchool(NUMS, 13));
+		
+		System.out.println("");
 		
 		System.out.println("Unordered Linear Search New School");
 		System.out.println("----------------------------------");

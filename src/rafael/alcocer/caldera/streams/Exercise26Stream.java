@@ -37,10 +37,6 @@ import java.util.stream.Collectors;
  * 
  * Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
  * 
- * SOLUTION:
- * 
- * Collect the employees group them by department and do the count.
- *
  * OUTPUT:
  * 
  * 500-----1
@@ -52,6 +48,10 @@ import java.util.stream.Collectors;
  * -----
  * 
  * {500=1, 100=3, 300=2}
+ * 
+ * SOLUTION:
+ * 
+ * Collect the employees group them by department and do the count.
  */
 public class Exercise26Stream {
 

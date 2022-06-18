@@ -23,6 +23,8 @@ import java.util.Arrays;
  * 
  * INPUT: { "Steve", "Svetlana", "sara", "John", "paul" }
  * 
+ * OUTPUT: SARA STEVE SVETLANA
+ * 
  * SOLUTION:
  * 
  * 1. Convert the specified string array in a Stream of strings.
@@ -34,8 +36,6 @@ import java.util.Arrays;
  * 4. Sort the stream in ascending order.
  * 
  * 5. Print the result.
- * 
- * OUTPUT: SARA STEVE SVETLANA
  */
 public class Exercise01ArraysStream {
 
