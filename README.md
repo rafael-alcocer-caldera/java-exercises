@@ -368,7 +368,7 @@ I wanted to have a series of exercises that are asked in interviews.
 ***     
 
 - Exercise29Stream
-    - Write a program to print Max/Min employee salary from the given collection.
+    - Write a program to print the max salary of an employee from each department.
       - INPUT:
          - Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
          - Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
@@ -445,6 +445,43 @@ I wanted to have a series of exercises that are asked in interviews.
         - 7.3, 5.2, 8.8
       - OUTPUT:
         - 21.3
+
+***
+
+- BinarySearch
+    - The binary search algorithm needs a sorted data set which has its costs too.
+      - EXPECTED RESULT: We want the index of the data searched.
+      - INPUT Before Sort: 
+        - { 8, 1, 13, 15, 7 }
+      - INPUT After Sort: 
+        - { 1, 7, 8, 13, 15 }
+      - OUTPUT:
+        - 1
+
+***
+
+- CheckDuplicatesBruteForce
+    - Given an array of n numbers, give an algorithm for checking whether there are any duplicate elements in the array or no?
+      - INPUT: 
+        - { 8, 1, 13, 15, 7 }
+      - OUTPUT:
+        - No duplicates
+      - INPUT:
+        -  { 8, 1, 13, 15, 7, 13 }
+      - OUTPUT:
+        - Duplicates: 13 <=> 13
+***
+
+- CheckDuplicatesSorting
+    - Can we improve the complexity of CheckDuplicatesBruteForce's solution?
+      - INPUT: 
+        - {  8, 1, 13, 15, 7 }
+      - OUTPUT:
+        - No duplicates
+      - INPUT:
+        -  { 8, 1, 13, 15, 7, 15 }
+      - OUTPUT:
+        - Duplicates: 15 <=> 15
 
 ***
 

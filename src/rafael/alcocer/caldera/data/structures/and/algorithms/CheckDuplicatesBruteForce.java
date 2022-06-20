@@ -16,7 +16,7 @@
 package rafael.alcocer.caldera.data.structures.and.algorithms;
 
 /**
- * PRONLEM: Given an array of n numbers, give an algorithm for checking whether
+ * PROBLEM: Given an array of n numbers, give an algorithm for checking whether
  * there are any duplicate elements in the array or no?
  * 
  * SOLUTION: This is one of the simplest problems. One obvious answer to this is
