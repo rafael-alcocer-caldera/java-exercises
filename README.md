@@ -33,8 +33,10 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise04AnagramImperativeProgramming
     - Write a function that takes in an array of strings as its argument and then print all the anagrams found in the array. 
-       - INPUT: {"eat", "tea", "funeral", "raza", "frog", "elvis", "real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun", "lives", "deudora", "dog", "ate", "eduardo", "zara"}
-       - OUTPUT: [tea, ate, raza, lives, deudora, funeral, eat, real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun, eduardo, elvis, zara]
+       - INPUT: 
+           - {"eat", "tea", "funeral", "raza", "frog", "elvis", "real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun", "lives", "deudora", "dog", "ate", "eduardo", "zara"}
+       - OUTPUT: 
+           - [tea, ate, raza, lives, deudora, funeral, eat, real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun, eduardo, elvis, zara]
     
 ***
 
@@ -50,15 +52,19 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise01ArraysStream
     - From an array of strings, print only the strings that start with 'S' in ascending order uppercased.
-       - INPUT: { "Steve", "Svetlana", "sara", "John", "paul" }
-       - OUTPUT: SARA STEVE SVETLANA
+       - INPUT: 
+           - { "Steve", "Svetlana", "sara", "John", "paul" }
+       - OUTPUT: 
+           - SARA STEVE SVETLANA
     
 ***
 
 - Exercise02ArraysStream
     - Square each number in an array and print the average.
-       - INPUT: { 2, 4, 6, 8, 10 }
-       - OUTPUT: 44.0
+       - INPUT: 
+           - { 2, 4, 6, 8, 10 }
+       - OUTPUT: 
+           - 44.0
     
 ***
 
@@ -66,8 +72,10 @@ I wanted to have a series of exercises that are asked in interviews.
     -  The following exercise comes from:
        [Letter Count Test](https://www.codingame.com/playgrounds/20782/java-guild-meeting-52018/streams---practice)
     - Now, starting again from a list of names, give me the total number of letters in all the names with more than 5 letters.
-        - INPUT: { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney", "Hubert" }
-        - OUTPUT: 34
+        - INPUT: 
+            - { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney", "Hubert" }
+        - OUTPUT: 
+            - 34
 
 ***
 
@@ -89,7 +97,8 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise12IntStream
     - Sum numbers from 1 to 4.
-        - OUTPUT: 10
+        - OUTPUT: 
+            - 10
 
 ***
 
@@ -105,14 +114,17 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise14IntStream
     - Get the minimum number from an array
-       - INPUT: { 100, 50, 56, 22, 3, 66 }
-       - OUTPUT: 3
+       - INPUT: 
+           - { 100, 50, 56, 22, 3, 66 }
+       - OUTPUT: 
+           - 3
 
 ***
 
 - Exercise15IntStream
     - Find 3 distinct smallest numbers from an array.
-       - INPUT: { 100, 50, 56, 22, 3, 66 }
+       - INPUT: 
+           - { 100, 50, 56, 22, 3, 66 }
        - OUTPUT: 
           - 3
           - 13
@@ -122,34 +134,46 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise01Palindrome
     - Several ways to check if a String is a Palindrome.
-       - INPUT String: "abcdf"
-       - Reversed String: "fdcba"
-       - OUTPUT: false
+       - INPUT String: 
+           - "abcdf"
+       - Reversed String: 
+           - "fdcba"
+       - OUTPUT: 
+           - false
        <br />
-       - Input String: "reconocer"
-       - Reversed String: "reconocer"
-       - OUTPUT: true
+       - Input String: 
+           - "reconocer"
+       - Reversed String: 
+           - "reconocer"
+       - OUTPUT: 
+           - true
 
 ***
 
 - Exercise02Palindrome
     - Find the longest palindrome within a string..
-       - INPUT String: "abcdfhreconocerhyhduracer"
-       - OUTPUT: hreconocerh
+       - INPUT String: 
+           - "abcdfhreconocerhyhduracer"
+       - OUTPUT: 
+           - hreconocerh
 
 ***
 
 - Exercise20Stream
     - From a list of numbers count those that are greater than 20 after after applying the square to each number.
-       - INPUT: 1, 2, 3, 4, 5, 6
-       - OUTPUT: 2
+       - INPUT: 
+           - 1, 2, 3, 4, 5, 6
+       - OUTPUT: 
+           - 2
 
 ***
 
 - Exercise21Stream
     - From a list of doubles get the average from those that are greater than 100.
-       - INPUT: 100.50, 200.45, 300.90, 37.56
-       - OUTPUT: 200.61666666666665
+       - INPUT: 
+           - 100.50, 200.45, 300.90, 37.56
+       - OUTPUT: 
+           - 200.61666666666665
 
 ***
 
@@ -160,8 +184,10 @@ I wanted to have a series of exercises that are asked in interviews.
 
 - Exercise23Stream
     - From a list of names, find the first one sorted in ascending order.
-       - INPUT: "Carl", "Ben", "Ana"
-       - OUPUT: "Ana"
+       - INPUT: 
+           - "Carl", "Ben", "Ana"
+       - OUPUT: 
+           - "Ana"
 
 ***
 
@@ -424,7 +450,7 @@ I wanted to have a series of exercises that are asked in interviews.
 - Exercise30Stream
     - Count the number of occurrences of words in an array..
       - INPUT:
-        - "six", "one", "two", "three", "one", "six", "five", "six", "one", "six"
+        - { "six", "one", "two", "three", "one", "six", "five", "six", "one", "six" }
       - OUTPUT:
         - {six=4, one=3, five=1, three=1, two=1}
         
@@ -499,13 +525,133 @@ I wanted to have a series of exercises that are asked in interviews.
 - SortedOrderedLinearSearch
     - If the elements of the array are already sorted, then in many cases we don’t have to scan the complete array to see if the element is there in the given array or not.
       - EXPECTED RESULT: We want the index of the data searched.
-        - Before sort: NUMS = { 8, 1, 13, 15, 7 }
-        - After Sort: NUMS = { 1, 7, 8, 13, 15 }
-          - OUTPUT: 
+        - Before sort: 
+            - NUMS = { 8, 1, 13, 15, 7 }
+        - After Sort: 
+            - NUMS = { 1, 7, 8, 13, 15 }
+        - OUTPUT: 
             - 2
 
 ***
 
+## TOP INTERVIEW QUESTIONS ARRAY
+- ContainsDuplicate
+    - Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+      - Example 1:
+        - Input: 
+            - nums = [1,2,3,1] 
+        - Output: 
+            - true 
+      - Example 2:
+        - Input: 
+            - nums = [1,2,3,4] 
+        - Output: 
+            - false 
+      - Example 3:
+        - Input: 
+            - nums = [1,1,1,3,3,4,3,2,4,2] 
+        - Output: 
+            - true
+      - Constraints:
+        - 1 <= nums.length <= 10^5 
+        - -10^9 <= nums[i] <= 10^9
+
+***
+
+- RotateArray
+    - Given an array, rotate the array to the right by k steps, where k is non-negative.
+      - Example 1:
+        - Input: 
+            - nums = [1,2,3,4,5,6,7]
+            - k = 3
+        - Output: 
+            - [5,6,7,1,2,3,4]
+        - Explanation:
+            - rotate 1 steps to the right: [7,1,2,3,4,5,6]
+            - rotate 2 steps to the right: [6,7,1,2,3,4,5]
+            - rotate 3 steps to the right: [5,6,7,1,2,3,4]
+      - Example 2:
+        - Input: 
+            - nums = [-1,-100,3,99]
+            - k = 2
+        - Output: 
+            - [3,99,-1,-100]
+        - Explanation:
+            - rotate 1 steps to the right: [99,-1,-100,3]
+            - rotate 2 steps to the right: [3,99,-1,-100]
+      - Constraints:
+        - 1 <= nums.length <= 10^5
+        - -2^31 <= nums[i] <= 2^31 - 1
+        -  0 <= k <= 10^5
+
+***
+
+- TwoSum
+    - Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+      - Example 1:
+        - Input: 
+            - nums = [2,7,11,15]
+            - target = 9
+        - Output: 
+            - [0,1]
+        - Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+      - Example 2:
+        - Input: 
+            - nums = [3,2,4]
+            - target = 6
+        - Output: 
+            - [1,2]
+      - Example 3:
+        - Input: 
+            - nums = [3,3]
+            - target = 6
+        - Output: 
+            - [0,1]
+      - Constraints:
+          - 2 <= nums.length <= 10^4
+          - -10^9 <= nums[i] <= 10^9
+          - -10^9 <= target <= 10^9
+
+## TOP INTERVIEW QUESTIONS STRING
+- ReverseInteger
+    - Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.
+    Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+        - Example 1:
+          - Input: 
+              - x = 123
+          - Output: 
+              - 321
+        - Example 2:
+          - Input: 
+              - x = -123
+          - Output: 
+              - -321
+        - Example 3:
+          - Input: 
+              - x = 120
+          - Output: 
+              - 21
+        - Constraints:
+          - -2^31 <= x <= 2^31 - 1
+
+***
+
+- ReverseString
+    - Write a function that reverses a string. The input string is given as an array of characters s. You must do this by modifying the input array in-place with O(1) extra memory.
+      - Example 1:
+        - Input: 
+            - s = ["h","e","l","l","o"]
+        - Output: 
+            - ["o","l","l","e","h"]
+      - Example 2:
+        - Input:
+            - s = ["H","a","n","n","a","h"]
+        -  Output:
+            - ["h","a","n","n","a","H"]
+      - Constraints:
+        - 1 <= s.length <= 105 s[i] is a printable ascii character.
+
+***
 ## License
 
 All work is under Apache 2.0 license
