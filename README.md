@@ -586,6 +586,28 @@ I wanted to have a series of exercises that are asked in interviews.
 
 ***
 
+- SingleNumber
+    - Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
+      - Example 1:
+        - Input: 
+            - nums = [2,2,1]
+        - Output: 
+            - 1
+      - Example 2:
+        - Input: 
+            - nums = [4,1,2,1,2]
+        - Output: 
+            - 4
+      - Example 3:
+        - Input: 
+            - nums = [1]
+        - Output: 
+            - 1
+      - Constraints:
+        - Each element in the array appears twice except for one element which appears only once.
+
+***
+
 - TwoSum
     - Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
       - Example 1:
