@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package rafael.alcocer.caldera.streams;
+package rafael.alcocer.caldera.streams.partitioningby;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import rafael.alcocer.caldera.streams.Employee;
+
 /**
- * PROBLEM: Write a program to print employees count working in each department.
+ * PROBLEM: Write a program to print active and inactive employees in the given
+ * collection.
  * 
  * INPUT:
  * 
@@ -39,48 +42,71 @@ import java.util.stream.Collectors;
  * 
  * OUTPUT:
  * 
- * 500-----1
+ * {false=[Employee:
+ * Id: 2
+ * Name: Emp2
+ * Department Id: 100
+ * Salary: 30500.75
+ * Status: inactive
+ * , Employee:
+ * Id: 3
+ * Name: Emp3
+ * Department Id: 300
+ * Salary: 45500.85
+ * Status: inactive
+ * ], 
  * 
- * 100-----3
- * 
- * 300-----2
- * 
- * -----
- * 
- * {500=1, 100=3, 300=2}
+ * true=[Employee:
+ * Id: 1
+ * Name: Emp1
+ * Department Id: 100
+ * Salary: 50000.6
+ * Status: active
+ * , Employee:
+ * Id: 4
+ * Name: Emp4
+ * Department Id: 300
+ * Salary: 75500.3
+ * Status: active
+ * , Employee:
+ * Id: 5
+ * Name: Emp5
+ * Department Id: 500
+ * Salary: 88500.45
+ * Status: active
+ * , Employee:
+ * Id: 6
+ * Name: Emp6
+ * Department Id: 100
+ * Salary: 22690.33
+ * Status: active
+ * ]}
  * 
  * SOLUTION:
  * 
- * Collect the employees group them by department and do the count.
+ * Collect the employees, partition them by status and return them.
+ * 
+ * true => active
+ * 
+ * false => inactive
  */
-public class Exercise26Stream {
+public class Exercise33Stream {
 
-    public static void main(String[] args) {
-        Exercise26Stream x = new Exercise26Stream();
-        x.go();
-        System.out.println("-----");
-        x.go2();
-    }
+	public static void main(String[] args) {
+		Exercise33Stream x = new Exercise33Stream();
+		x.go();
+	}
 
-    public void go() {
-        List<Employee> employees = generateEmployees();
-        
-        employees.stream()
-            .collect(Collectors.groupingBy(Employee::getDeptId))
-            .entrySet()
-            .forEach(entry -> System.out.println(entry.getKey() + "-----" + entry.getValue().size()));
-    }
-    
-    public void go2() {
-        List<Employee> employees = generateEmployees();
-        
-        Map<Integer, Long> map = employees.stream()
-            .collect(Collectors.groupingBy(Employee::getDeptId, Collectors.counting()));
-        
-        System.out.println(map);
-    }
+	public void go() {
+		List<Employee> employees = generateEmployees();
 
-    public List<Employee> generateEmployees() {
+		Map<Boolean, List<Employee>> map = employees.stream()
+				.collect(Collectors.partitioningBy(employe -> employe.getStatus().equals("active")));
+
+		System.out.println(map);
+	}
+
+	public List<Employee> generateEmployees() {
 		// int id, String name, int deptid, double salary, String status
 		Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
 		Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");

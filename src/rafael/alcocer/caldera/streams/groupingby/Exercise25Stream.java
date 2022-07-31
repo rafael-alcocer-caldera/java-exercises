@@ -1,8 +1,10 @@
-package rafael.alcocer.caldera.streams;
+package rafael.alcocer.caldera.streams.groupingby;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import rafael.alcocer.caldera.streams.Employee;
 
 /**
  * PROBLEM: Write a program to print employee details working in each department.

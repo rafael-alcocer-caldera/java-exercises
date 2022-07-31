@@ -13,17 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package rafael.alcocer.caldera.streams;
+package rafael.alcocer.caldera.streams.groupingby;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
+
+import rafael.alcocer.caldera.streams.Employee;
 
 /**
- * PROBLEM: Write a program to print the max salary of an employee from each department.
+ * PROBLEM: Write a program to print Max/Min employee salary from the given collection.
  * 
  * INPUT:
  * 
@@ -40,83 +39,45 @@ import java.util.stream.Collectors;
  * Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
  * 
  * OUTPUT:
- * 
+ * ##### Max Employee Salary #####
  * Employee:
  * Id: 5
  * Name: Emp5
  * Department Id: 500
  * Salary: 88500.45
  * Status: active
- *
+ * 
+ * ##### Min Employee Salary #####
  * Employee:
- * Id: 1
- * Name: Emp1
+ * Id: 6
+ * Name: Emp6
  * Department Id: 100
- * Salary: 50000.6
+ * Salary: 22690.33
  * Status: active
- * 
- * Employee:
- * Id: 4
- * Name: Emp4
- * Department Id: 300
- * Salary: 75500.3
- * Status: active
- * 
- * ------
- * 
- * {500=Optional[Employee:
- * Id: 5
- * Name: Emp5
- * Department Id: 500
- * Salary: 88500.45
- * Status: active
- * ], 100=Optional[Employee:
- * Id: 1
- * Name: Emp1
- * Department Id: 100
- * Salary: 50000.6
- * Status: active
- * ], 300=Optional[Employee:
- * Id: 4
- * Name: Emp4
- * Department Id: 300
- * Salary: 75500.3
- * Status: active
- * ]}
  * 
  * SOLUTION:
  * 
- * Collect employees and group them by department and compare their salary.
+ * Use the same list of employees to get the min and max.
  */
-public class Exercise29Stream {
+public class Exercise28Stream {
 
     public static void main(String[] args) {
-        Exercise29Stream x = new Exercise29Stream();
+        Exercise28Stream x = new Exercise28Stream();
         x.go();
-        System.out.println("------");
-        x.go2();
     }
 
     public void go() {
         List<Employee> employees = generateEmployees();
         
+        System.out.println("##### Max Employee Salary #####");
         employees.stream()
-            .collect(Collectors.groupingBy(Employee::getDeptId))
-            .entrySet()
-            .stream()
-            .map(entry -> entry.getValue().stream().max(Comparator.comparingDouble(Employee::getSalary)).get())
-            .collect(Collectors.toList())
-            .stream()
-            .forEach(System.out::println);
-    }
-    
-    public void go2() {
-        List<Employee> employees = generateEmployees();
+            .max(Comparator.comparingDouble(Employee::getSalary))
+            .ifPresent(System.out::println);
         
-        Map<Integer, Optional<Employee>> map = employees.stream()
-            .collect(Collectors.groupingBy(Employee::getDeptId, Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
-        
-        System.out.println(map);
+        System.out.println("##### Min Employee Salary #####");
+        employees.stream()
+            .min(Comparator.comparingDouble(Employee::getSalary))
+            .ifPresent(System.out::println);
     }
 
     public List<Employee> generateEmployees() {

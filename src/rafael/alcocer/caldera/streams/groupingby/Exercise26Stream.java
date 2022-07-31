@@ -13,15 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package rafael.alcocer.caldera.streams;
+package rafael.alcocer.caldera.streams.groupingby;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import rafael.alcocer.caldera.streams.Employee;
+
 /**
- * PROBLEM: Write a program to print active and inactive employees in the given collection.
+ * PROBLEM: Write a program to print employees count working in each department.
  * 
  * INPUT:
  * 
@@ -39,93 +41,26 @@ import java.util.stream.Collectors;
  * 
  * OUTPUT:
  * 
- * inactive-----[Employee:
- * Id: 2
- * Name: Emp2
- * Department Id: 100
- * Salary: 30500.75
- * Status: inactive
- * , Employee:
- * Id: 3
- * Name: Emp3
- * Department Id: 300
- * Salary: 45500.85
- * Status: inactive
- * ]
- * active-----[Employee:
- * Id: 1
- * Name: Emp1
- * Department Id: 100
- * Salary: 50000.6
- * Status: active
- * , Employee:
- * Id: 4
- * Name: Emp4
- * Department Id: 300
- * Salary: 75500.3
- * Status: active
- * , Employee:
- * Id: 5
- * Name: Emp5
- * Department Id: 500
- * Salary: 88500.45
- * Status: active
- * , Employee:
- * Id: 6
- * Name: Emp6
- * Department Id: 100
- * Salary: 22690.33
- * Status: active
- * ]
- * ------
- * {inactive=[Employee:
- * Id: 2
- * Name: Emp2
- * Department Id: 100
- * Salary: 30500.75
- * Status: inactive
- * , Employee:
- * Id: 3
- * Name: Emp3
- * Department Id: 300
- * Salary: 45500.85
- * Status: inactive
- * ], active=[Employee:
- * Id: 1
- * Name: Emp1
- * Department Id: 100
- * Salary: 50000.6
- * Status: active
- * , Employee:
- * Id: 4
- * Name: Emp4
- * Department Id: 300
- * Salary: 75500.3
- * Status: active
- * , Employee:
- * Id: 5
- * Name: Emp5
- * Department Id: 500
- * Salary: 88500.45
- * Status: active
- * , Employee:
- * Id: 6
- * Name: Emp6
- * Department Id: 100
- * Salary: 22690.33
- * Status: active
- * ]}
+ * 500-----1
+ * 
+ * 100-----3
+ * 
+ * 300-----2
+ * 
+ * -----
+ * 
+ * {500=1, 100=3, 300=2}
  * 
  * SOLUTION:
  * 
- * Collect the employees, group them by status and return them.
+ * Collect the employees group them by department and do the count.
  */
-public class Exercise27Stream {
+public class Exercise26Stream {
 
     public static void main(String[] args) {
-        Exercise27Stream x = new Exercise27Stream();
+        Exercise26Stream x = new Exercise26Stream();
         x.go();
-        System.out.println("------");
+        System.out.println("-----");
         x.go2();
     }
 
@@ -133,16 +68,16 @@ public class Exercise27Stream {
         List<Employee> employees = generateEmployees();
         
         employees.stream()
-            .collect(Collectors.groupingBy(Employee::getStatus))
+            .collect(Collectors.groupingBy(Employee::getDeptId))
             .entrySet()
-            .forEach(entry -> System.out.println(entry.getKey() + "-----" + entry.getValue()));
+            .forEach(entry -> System.out.println(entry.getKey() + "-----" + entry.getValue().size()));
     }
     
     public void go2() {
         List<Employee> employees = generateEmployees();
         
-        Map<String, List<Employee>> map = employees.stream()
-            .collect(Collectors.groupingBy(Employee::getStatus));
+        Map<Integer, Long> map = employees.stream()
+            .collect(Collectors.groupingBy(Employee::getDeptId, Collectors.counting()));
         
         System.out.println(map);
     }
