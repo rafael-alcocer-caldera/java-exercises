@@ -603,7 +603,7 @@ I wanted to have a series of exercises that are asked in interviews.
 ***
 
 - SortedOrderedLinearSearch
-    - If the elements of the array are already sorted, then in many cases we don’t have to scan the complete array to see if the element is there in the given array or not.
+    - If the elements of the array are already sorted, then in many cases we donï¿½t have to scan the complete array to see if the element is there in the given array or not.
       - EXPECTED RESULT: We want the index of the data searched.
         - Before sort: 
             - NUMS = { 8, 1, 13, 15, 7 }
@@ -755,6 +755,8 @@ I wanted to have a series of exercises that are asked in interviews.
           - -10^9 <= nums[i] <= 10^9
           - -10^9 <= target <= 10^9
 
+***
+
 ## TOP INTERVIEW QUESTIONS STRING
 - ReverseInteger
     - Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.
@@ -795,6 +797,29 @@ I wanted to have a series of exercises that are asked in interviews.
         - 1 <= s.length <= 105 s[i] is a printable ascii character.
 
 ***
+
+## OPTIONAL
+- Optional collection validation
+    - From a list of employees get the ids. 
+      1. Validate that the list is not null.
+      2. Stream the list.
+      3. Verify that each element is not null.
+      4. Get the ids.
+      5. From each id, check that all are positive..
+      6. Return the list of ids.
+            - INPUT:
+                - Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
+                - Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
+                - Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
+                - Employee e4 = new Employee(-1, "Emp4", 300, 75500.30, "active");
+                - Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+                - Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
+                - Employee e7 = new Employee(-1, "Emp7", 200, 25990.66, "inactive");
+                - Employee e8 = new Employee(8, "Emp8", 200, 32790.25, "active");
+            - OUTPUT:
+                - ##### ids: [1, 2, 3, 5, 6, 8]
+***
+
 ## License
 
 All work is under Apache 2.0 license
