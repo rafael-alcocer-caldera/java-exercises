@@ -23,32 +23,32 @@ import java.util.Set;
  * Find the longest palindrome within a string.
  */
 public class Exercise02Palindrome {
-	
-	private static final String S1 = "abcdfhreconocerhyhduracer";
+
+    private static final String S1 = "abcdfhreconocerhyhduracer";
 
     public static void main(String[] args) {
         Exercise02Palindrome x = new Exercise02Palindrome();
         x.go(S1);
     }
-    
+
     public void go(String s) {
-    	Exercise01Palindrome palindrome = new Exercise01Palindrome();
-    	Set<String> set = new HashSet<>();
-    	
-    	for (int i = 0; i < s.length(); i++) {
-    		for (int j = i + 1; j <= s.length(); j++) {
-    			if (palindrome.isPalindromeWithStringBuilder(s.substring(i, j))) {
-    				set.add(s.substring(i, j));
-    			}
-    		}
-    	}
-    	
-    	System.out.println("##### Palindromes found: " + set);
-    	
-    	System.out.println("##### The longest Palindrome within the String is:");
-    	
-    	set.stream()
-    		.max(Comparator.comparingInt(p -> p.length()))
-    		.ifPresent(System.out::println);
+        Exercise01Palindrome palindrome = new Exercise01Palindrome();
+        Set<String> set = new HashSet<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 1; j <= s.length(); j++) {
+                if (palindrome.isPalindromeWithStringBuilder(s.substring(i, j))) {
+                    set.add(s.substring(i, j));
+                }
+            }
+        }
+
+        System.out.println("##### Palindromes found: " + set);
+
+        System.out.println("##### The longest Palindrome within the String is:");
+
+        set.stream()
+           .max(Comparator.comparingInt(p -> p.length()))
+           .ifPresent(System.out::println);
     }
 }

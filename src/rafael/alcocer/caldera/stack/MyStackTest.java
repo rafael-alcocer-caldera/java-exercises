@@ -17,34 +17,34 @@ package rafael.alcocer.caldera.stack;
 
 public class MyStackTest {
 
-	public static void main(String[] args) {
-		MyStack stack = new MyStack();
-		Object[] array = stack.getStack();
-		array[0] = "One";
-		
-		stack.pop();
-		
-		System.out.println("-----------------------------------------------------");
-		
-		array = stack.push(2);
-		System.out.println("##### array.length: " + array.length);
-		
-		stack.pop();
-		
-		System.out.println("-----------------------------------------------------");
-		
-		array = stack.push(3);
-		System.out.println("##### array.length: " + array.length);
-		
-		stack.pop();
-		
-		System.out.println("-----------------------------------------------------");
-		
-		array = stack.push(4);
-		System.out.println("##### array.length: " + array.length);
-		
-		stack.pop();
-		
-		System.out.println("-----------------------------------------------------");
-	}
+    public static void main(String[] args) {
+        MyStack stack = new MyStack();
+        Object[] array = stack.getStack();
+        array[0] = "One";
+
+        stack.pop();
+
+        System.out.println("-----------------------------------------------------");
+
+        array = stack.push(2);
+        System.out.println("##### array.length: " + array.length);
+
+        stack.pop();
+
+        System.out.println("-----------------------------------------------------");
+
+        array = stack.push(3);
+        System.out.println("##### array.length: " + array.length);
+
+        stack.pop();
+
+        System.out.println("-----------------------------------------------------");
+
+        array = stack.push(4);
+        System.out.println("##### array.length: " + array.length);
+
+        stack.pop();
+
+        System.out.println("-----------------------------------------------------");
+    }
 }

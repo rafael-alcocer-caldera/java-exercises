@@ -18,8 +18,8 @@ package rafael.alcocer.caldera.streams;
 import java.util.Arrays;
 
 /**
- * PROBLEM: From an array of strings, get only those that start with an 'S' in an
- * ascending order.
+ * PROBLEM: From an array of strings, get only those that start with an 'S' in
+ * an ascending order.
  * 
  * INPUT: { "Steve", "Svetlana", "sara", "John", "paul" }
  * 
@@ -39,18 +39,18 @@ import java.util.Arrays;
  */
 public class Exercise01ArraysStream {
 
-	private static final String[] NAMES = { "Steve", "Svetlana", "sara", "John", "paul" };
+    private static final String[] NAMES = { "Steve", "Svetlana", "sara", "John", "paul" };
 
-	public static void main(String[] args) {
-		Exercise01ArraysStream x = new Exercise01ArraysStream();
-		x.go(NAMES);
-	}
+    public static void main(String[] args) {
+        Exercise01ArraysStream x = new Exercise01ArraysStream();
+        x.go(NAMES);
+    }
 
-	public void go(String[] names) {
-		Arrays.stream(names)
-				.map(name -> name.toUpperCase())
-				.filter(name -> name.startsWith("S"))
-				.sorted()
-				.forEach(System.out::println);
-	}
+    public void go(String[] names) {
+        Arrays.stream(names)
+              .map(name -> name.toUpperCase())
+              .filter(name -> name.startsWith("S"))
+              .sorted()
+              .forEach(System.out::println);
+    }
 }

@@ -27,34 +27,34 @@ package rafael.alcocer.caldera.data.structures.and.algorithms;
  */
 public class CheckDuplicatesBruteForce {
 
-	private static final int[] NUMS1 = { 8, 1, 13, 15, 7 };
-	private static final int[] NUMS2 = { 8, 1, 13, 15, 7, 13 };
+    private static final int[] NUMS1 = { 8, 1, 13, 15, 7 };
+    private static final int[] NUMS2 = { 8, 1, 13, 15, 7, 13 };
 
-	public static void main(String[] args) {
-		CheckDuplicatesBruteForce x = new CheckDuplicatesBruteForce();
-		x.checkDuplicates(NUMS1);
-		System.out.println("");
-		x.checkDuplicates(NUMS2);
-	}
+    public static void main(String[] args) {
+        CheckDuplicatesBruteForce x = new CheckDuplicatesBruteForce();
+        x.checkDuplicates(NUMS1);
+        System.out.println("");
+        x.checkDuplicates(NUMS2);
+    }
 
-	/**
-	 * Time Complexity: O(n^2), for two nested for loops.
-	 * 
-	 * Space Complexity: O(1).
-	 * 
-	 * @param nums
-	 */
-	public void checkDuplicates(int[] nums) {
-		for (int i = 0; i < nums.length; i++) {
-			for (int j = i + 1; j < nums.length; j++) {
-				if (nums[i] == nums[j]) {
-					System.out.println("Duplicates: " + nums[i] + " <=> " + nums[j]);
+    /**
+     * Time Complexity: O(n^2), for two nested for loops.
+     * 
+     * Space Complexity: O(1).
+     * 
+     * @param nums
+     */
+    public void checkDuplicates(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    System.out.println("Duplicates: " + nums[i] + " <=> " + nums[j]);
 
-					return;
-				}
-			}
-		}
+                    return;
+                }
+            }
+        }
 
-		System.out.println("No duplicates");
-	}
+        System.out.println("No duplicates");
+    }
 }

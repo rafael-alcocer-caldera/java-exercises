@@ -26,15 +26,15 @@ import java.util.stream.Stream;
  */
 public class Exercise23Stream {
 
-	public static void main(String[] args) {
-		Exercise23Stream x = new Exercise23Stream();
-		x.go();
-	}
+    public static void main(String[] args) {
+        Exercise23Stream x = new Exercise23Stream();
+        x.go();
+    }
 
-	public void go() {
-		Stream.of("Carl", "Ben", "Ana")
-			.sorted()
-			.findFirst()
-			.ifPresent(System.out::println);
-	}
+    public void go() {
+        Stream.of("Carl", "Ben", "Ana")
+            .sorted()
+            .findFirst()
+            .ifPresent(System.out::println);
+    }
 }

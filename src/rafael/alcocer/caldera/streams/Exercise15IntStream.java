@@ -26,8 +26,8 @@ import java.util.stream.IntStream;
  * OUTPUT: 3, 13, 22
  */
 public class Exercise15IntStream {
-	
-	private static final int[] NUMBERS = {100, 50, 56, 22, 3, 66, 200, 24, 13,3};
+
+    private static final int[] NUMBERS = { 100, 50, 56, 22, 3, 66, 200, 24, 13, 3 };
 
     public static void main(String[] args) {
         Exercise15IntStream x = new Exercise15IntStream();
@@ -35,10 +35,10 @@ public class Exercise15IntStream {
         System.out.println("-----");
         x.go(NUMBERS);
     }
-    
+
     public void goOldSchool(int[] numbers) {
         Arrays.sort(numbers);
-        
+
         for (int i = 0; i < 3; i++) {
             System.out.println(numbers[i]); // distinct is missing
         }

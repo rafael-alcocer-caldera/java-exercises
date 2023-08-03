@@ -28,16 +28,13 @@ public class Exercise10IntStream {
     }
 
     /**
-     * range(1, 10) => 1-9
-     * rangeClosed(1, 10) => 1-10
+     * range(1, 10) => 1-9 rangeClosed(1, 10) => 1-10
      */
     public void go() {
-        IntStream.range(1, 10)
-            .forEach(System.out::println);
-        
+        IntStream.range(1, 10).forEach(System.out::println);
+
         System.out.println("-----------");
-        
-        IntStream.rangeClosed(1, 10)
-        .forEach(System.out::println);
+
+        IntStream.rangeClosed(1, 10).forEach(System.out::println);
     }
 }

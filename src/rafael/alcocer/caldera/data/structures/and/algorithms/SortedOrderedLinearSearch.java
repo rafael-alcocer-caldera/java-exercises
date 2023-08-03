@@ -31,62 +31,62 @@ import java.util.stream.IntStream;
  */
 public class SortedOrderedLinearSearch {
 
-	private static final int[] NUMS = { 8, 1, 13, 15, 7 };
+    private static final int[] NUMS = { 8, 1, 13, 15, 7 };
 
-	public static void main(String[] args) {
-		SortedOrderedLinearSearch x = new SortedOrderedLinearSearch();
-		
-		System.out.println("Sorted Ordered Linear Search Old School");
-		System.out.println("---------------------------------------");
-		System.out.println(x.searchOldSchool(NUMS, 13));
-		
-		System.out.println("");
-		
-		System.out.println("Sorted Ordered Linear Search New School");
-		System.out.println("---------------------------------------");
-		System.out.println(x.searchNewSchool(NUMS, 13));
-	}
+    public static void main(String[] args) {
+        SortedOrderedLinearSearch x = new SortedOrderedLinearSearch();
 
-	/**
-	 * In the algorithm below, it can be seen that, at any point if the value at
-	 * nums[i] is greater than the data to be searched, then we just return –1 without
-	 * searching the remaining array.
-	 * 
-	 * Time complexity of this algorithm is O(n).This is because in the worst case
-	 * we need to scan the complete array. But in the average case it reduces the
-	 * complexity even though the growth rate is the same. Space complexity: O(1).
-	 * 
-	 * @param nums
-	 * @param data
-	 * @return
-	 */
-	public int searchOldSchool(int[] nums, int data) {
-		Arrays.sort(nums);
-		
-		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] == data) {
-				return i;
-			} else if (nums[i] > data) {
-				return -1;
-			}
-		}
+        System.out.println("Sorted Ordered Linear Search Old School");
+        System.out.println("---------------------------------------");
+        System.out.println(x.searchOldSchool(NUMS, 13));
 
-		return -1;
-	}
-	
-	/**
-	 * 
-	 * 
-	 * @param nums
-	 * @param data
-	 * @return
-	 */
-	public int searchNewSchool(int[] nums, int data) {
-		Arrays.sort(nums);
-		
-		return IntStream.range(0, nums.length)
-			.filter(i -> nums[i] == data)
-			.findFirst()
-			.orElseGet(() -> -1);
-	}
+        System.out.println("");
+
+        System.out.println("Sorted Ordered Linear Search New School");
+        System.out.println("---------------------------------------");
+        System.out.println(x.searchNewSchool(NUMS, 13));
+    }
+
+    /**
+     * In the algorithm below, it can be seen that, at any point if the value at
+     * nums[i] is greater than the data to be searched, then we just return –1
+     * without searching the remaining array.
+     * 
+     * Time complexity of this algorithm is O(n).This is because in the worst case
+     * we need to scan the complete array. But in the average case it reduces the
+     * complexity even though the growth rate is the same. Space complexity: O(1).
+     * 
+     * @param nums
+     * @param data
+     * @return
+     */
+    public int searchOldSchool(int[] nums, int data) {
+        Arrays.sort(nums);
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == data) {
+                return i;
+            } else if (nums[i] > data) {
+                return -1;
+            }
+        }
+
+        return -1;
+    }
+
+    /**
+     * 
+     * 
+     * @param nums
+     * @param data
+     * @return
+     */
+    public int searchNewSchool(int[] nums, int data) {
+        Arrays.sort(nums);
+
+        return IntStream.range(0, nums.length)
+                .filter(i -> nums[i] == data)
+                .findFirst()
+                .orElseGet(() -> -1);
+    }
 }

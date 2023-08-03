@@ -28,17 +28,17 @@ import java.util.stream.IntStream;
  */
 public class Exercise11IntStream {
 
-	public static void main(String[] args) {
-		Exercise11IntStream x = new Exercise11IntStream();
-		x.go();
-	}
+    public static void main(String[] args) {
+        Exercise11IntStream x = new Exercise11IntStream();
+        x.go();
+    }
 
-	/**
-	 * Skips the first 5 elements.
-	 */
-	public void go() {
-		IntStream.rangeClosed(1, 10)
-			.skip(5)
-			.forEach(System.out::println);
-	}
+    /**
+     * Skips the first 5 elements.
+     */
+    public void go() {
+        IntStream.rangeClosed(1, 10)
+            .skip(5)
+            .forEach(System.out::println);
+    }
 }

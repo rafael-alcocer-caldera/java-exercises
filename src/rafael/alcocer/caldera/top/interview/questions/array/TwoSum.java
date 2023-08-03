@@ -59,146 +59,146 @@ import java.util.Map;
  */
 public class TwoSum {
 
-	private static final int[] NUMS1 = { 2, 1, 11, 15, 7 }; // target = 9 Output: [0,4]
-	private static final int[] NUMS2 = { 2, 7, 11, 15 }; // target = 9 Output: [0,1]
-	private static final int[] NUMS3 = { 3, 2, 4 }; // target = 6 Output: [1,2]
-	private static final int[] NUMS4 = { 3, 3 }; // target = 6 Output: [0,1]
+    private static final int[] NUMS1 = { 2, 1, 11, 15, 7 }; // target = 9 Output: [0,4]
+    private static final int[] NUMS2 = { 2, 7, 11, 15 }; // target = 9 Output: [0,1]
+    private static final int[] NUMS3 = { 3, 2, 4 }; // target = 6 Output: [1,2]
+    private static final int[] NUMS4 = { 3, 3 }; // target = 6 Output: [0,1]
 
-	int index = 0;
+    int index = 0;
 
-	public static void main(String[] args) {
-		TwoSum x = new TwoSum();
+    public static void main(String[] args) {
+        TwoSum x = new TwoSum();
 
-		System.out.println("Two Sum with Map");
-		System.out.println("----------------");
+        System.out.println("Two Sum with Map");
+        System.out.println("----------------");
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS1));
-		System.out.println("TARGET: " + 9);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS1, 9)));
+        System.out.println("INPUT: " + Arrays.toString(NUMS1));
+        System.out.println("TARGET: " + 9);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS1, 9)));
 
-		System.out.println("");
+        System.out.println("");
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS2));
-		System.out.println("TARGET: " + 9);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS2, 9)));
+        System.out.println("INPUT: " + Arrays.toString(NUMS2));
+        System.out.println("TARGET: " + 9);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS2, 9)));
 
-		System.out.println("");
+        System.out.println("");
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS3));
-		System.out.println("TARGET: " + 6);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS3, 6)));
-		
-		System.out.println("");
+        System.out.println("INPUT: " + Arrays.toString(NUMS3));
+        System.out.println("TARGET: " + 6);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS3, 6)));
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS4));
-		System.out.println("TARGET: " + 6);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS4, 6)));
+        System.out.println("");
 
-		System.out.println("");
+        System.out.println("INPUT: " + Arrays.toString(NUMS4));
+        System.out.println("TARGET: " + 6);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSum(NUMS4, 6)));
 
-		System.out.println("Two Sum Brute Force");
-		System.out.println("-------------------");
+        System.out.println("");
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS1));
-		System.out.println("TARGET: " + 9);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS1, 9)));
+        System.out.println("Two Sum Brute Force");
+        System.out.println("-------------------");
 
-		System.out.println("");
+        System.out.println("INPUT: " + Arrays.toString(NUMS1));
+        System.out.println("TARGET: " + 9);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS1, 9)));
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS2));
-		System.out.println("TARGET: " + 9);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS2, 9)));
+        System.out.println("");
 
-		System.out.println("");
+        System.out.println("INPUT: " + Arrays.toString(NUMS2));
+        System.out.println("TARGET: " + 9);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS2, 9)));
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS3));
-		System.out.println("TARGET: " + 6);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS3, 6)));
-		
-		System.out.println("");
+        System.out.println("");
 
-		System.out.println("INPUT: " + Arrays.toString(NUMS4));
-		System.out.println("TARGET: " + 6);
-		System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS4, 6)));
-	}
+        System.out.println("INPUT: " + Arrays.toString(NUMS3));
+        System.out.println("TARGET: " + 6);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS3, 6)));
 
-	/**
-	 * i = 0 =>
-	 * 
-	 * x = target - nums[i] = 9 - 2 = 7
-	 * 
-	 * map.put(nums[i], i) => map.put(2, 0)
-	 * 
-	 * ------------------------------------
-	 * 
-	 * i = 1 =>
-	 * 
-	 * x = target - nums[i] = 9 - 1 = 8
-	 * 
-	 * map.put(nums[i], i) => map.put(1, 1)
-	 * 
-	 * ------------------------------------
-	 * 
-	 * Cuando llega al segundo numero que hace que el target sea 9... esto es, el
-	 * primero fue 2... el segundo es 7
-	 * 
-	 * i = 4 =>
-	 * 
-	 * x = target - nums[i] = 9 - 7 = 2
-	 * 
-	 * map.put(nums[i], i) => map.put(7, 4)
-	 * 
-	 * El map contiene lo siguiente:
-	 * 
-	 * {1=1, 2=0, 7=4, 11=2, 15=3}
-	 * 
-	 * Por lo tanto, if (map.containsKey(x)) {...} if (map.containsKey(2)) {} es
-	 * true
-	 * 
-	 * entonces return new int[] { map.get(x), i } =>
-	 * 
-	 * return new int[] { 0, 4 }
-	 * 
-	 * Time complexity: O(n)
-	 * 
-	 * @param nums
-	 * @param target
-	 * @return
-	 */
-	public int[] twoSum(int[] nums, int target) {
-		if (target < -Math.pow(10, 9) || target > Math.pow(10, 9) || nums.length < 2 || nums.length > Math.pow(10, 9)) {
-			return new int[] {};
-		}
+        System.out.println("");
 
-		Map<Integer, Integer> map = new HashMap<>();
+        System.out.println("INPUT: " + Arrays.toString(NUMS4));
+        System.out.println("TARGET: " + 6);
+        System.out.println("OUTPUT: " + Arrays.toString(x.twoSumBruteForce(NUMS4, 6)));
+    }
 
-		for (int i = 0; i < nums.length; i++) {
-			if (map.containsKey(target - nums[i])) {
-				return new int[] { map.get(target - nums[i]), i };
-			}
+    /**
+     * i = 0 =>
+     * 
+     * x = target - nums[i] = 9 - 2 = 7
+     * 
+     * map.put(nums[i], i) => map.put(2, 0)
+     * 
+     * ------------------------------------
+     * 
+     * i = 1 =>
+     * 
+     * x = target - nums[i] = 9 - 1 = 8
+     * 
+     * map.put(nums[i], i) => map.put(1, 1)
+     * 
+     * ------------------------------------
+     * 
+     * Cuando llega al segundo numero que hace que el target sea 9... esto es, el
+     * primero fue 2... el segundo es 7
+     * 
+     * i = 4 =>
+     * 
+     * x = target - nums[i] = 9 - 7 = 2
+     * 
+     * map.put(nums[i], i) => map.put(7, 4)
+     * 
+     * El map contiene lo siguiente:
+     * 
+     * {1=1, 2=0, 7=4, 11=2, 15=3}
+     * 
+     * Por lo tanto, if (map.containsKey(x)) {...} if (map.containsKey(2)) {} es
+     * true
+     * 
+     * entonces return new int[] { map.get(x), i } =>
+     * 
+     * return new int[] { 0, 4 }
+     * 
+     * Time complexity: O(n)
+     * 
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum(int[] nums, int target) {
+        if (target < -Math.pow(10, 9) || target > Math.pow(10, 9) || nums.length < 2 || nums.length > Math.pow(10, 9)) {
+            return new int[] {};
+        }
 
-			map.put(nums[i], i); // value-index
-		}
+        Map<Integer, Integer> map = new HashMap<>();
 
-		return new int[] {};
-	}
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(target - nums[i])) {
+                return new int[] { map.get(target - nums[i]), i };
+            }
 
-	/**
-	 * Time complexity: O(n^2)
-	 * 
-	 * @param nums
-	 * @param target
-	 * @return
-	 */
-	private int[] twoSumBruteForce(int[] nums, int target) {
-		for (int i = 0; i < nums.length; i++) {
-			for (int j = i + 1; j < nums.length; j++) {
-				if (nums[i] + nums[j] == target) {
-					return new int[] { i, j };
-				}
-			}
-		}
+            map.put(nums[i], i); // value-index
+        }
 
-		return new int[] {};
-	}
+        return new int[] {};
+    }
+
+    /**
+     * Time complexity: O(n^2)
+     * 
+     * @param nums
+     * @param target
+     * @return
+     */
+    private int[] twoSumBruteForce(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[] { i, j };
+                }
+            }
+        }
+
+        return new int[] {};
+    }
 }

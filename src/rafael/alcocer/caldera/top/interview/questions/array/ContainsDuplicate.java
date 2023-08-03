@@ -49,27 +49,27 @@ import java.util.stream.Collectors;
  */
 public class ContainsDuplicate {
 
-	private static final int[] NUMS1 = { 1, 2, 3, 1 };
-	private static final int[] NUMS2 = { 1, 2, 3, 4 };
-	private static final int[] NUMS3 = { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
+    private static final int[] NUMS1 = { 1, 2, 3, 1 };
+    private static final int[] NUMS2 = { 1, 2, 3, 4 };
+    private static final int[] NUMS3 = { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
 
-	public static void main(String[] args) {
-		ContainsDuplicate x = new ContainsDuplicate();
-		System.out.println("NUMS1: " + x.containsDuplicate(NUMS1));
-		System.out.println("NUMS2: " + x.containsDuplicate(NUMS2));
-		System.out.println("NUMS3: " + x.containsDuplicate(NUMS3));
-	}
+    public static void main(String[] args) {
+        ContainsDuplicate x = new ContainsDuplicate();
+        System.out.println("NUMS1: " + x.containsDuplicate(NUMS1));
+        System.out.println("NUMS2: " + x.containsDuplicate(NUMS2));
+        System.out.println("NUMS3: " + x.containsDuplicate(NUMS3));
+    }
 
-	public boolean containsDuplicate(int[] nums) {
-		if (nums.length < 1 || nums.length > Math.pow(10, 5) ) {
-			return false;
-		}
-		
-		return Arrays.stream(nums)
-				.boxed()
-				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-				.entrySet()
-				.stream()
-				.anyMatch(entry -> entry.getValue() >= 2);
-	}
+    public boolean containsDuplicate(int[] nums) {
+        if (nums.length < 1 || nums.length > Math.pow(10, 5)) {
+            return false;
+        }
+
+        return Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet()
+                .stream()
+                .anyMatch(entry -> entry.getValue() >= 2);
+    }
 }

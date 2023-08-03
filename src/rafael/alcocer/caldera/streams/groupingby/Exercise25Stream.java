@@ -85,14 +85,14 @@ public class Exercise25Stream {
     }
 
     public List<Employee> generateEmployees() {
-		// int id, String name, int deptid, double salary, String status
-		Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
-		Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
-		Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
-		Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
-		Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
-		Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
+        // int id, String name, int deptid, double salary, String status
+        Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
+        Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
+        Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
+        Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
+        Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+        Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
 
-		return Arrays.asList(e1, e2, e3, e4, e5, e6);
+        return Arrays.asList(e1, e2, e3, e4, e5, e6);
     }
 }

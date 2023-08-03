@@ -51,34 +51,34 @@ package rafael.alcocer.caldera.palindrome;
  */
 public class Exercise03Palindrome {
 
-	private static final String S1 = "A man, a plan, a canal: Panama";
-	private static final String S2 = "race a car";
-	private static final String S3 = " ";
+    private static final String S1 = "A man, a plan, a canal: Panama";
+    private static final String S2 = "race a car";
+    private static final String S3 = " ";
 
-	public static void main(String[] args) {
-		Exercise03Palindrome x = new Exercise03Palindrome();
+    public static void main(String[] args) {
+        Exercise03Palindrome x = new Exercise03Palindrome();
 
-		System.out.println("INPUT: " + "\"" + S1 + "\"");
-		System.out.println("OUTPUT: " + x.isPalindrome(S1));
+        System.out.println("INPUT: " + "\"" + S1 + "\"");
+        System.out.println("OUTPUT: " + x.isPalindrome(S1));
 
-		System.out.println("---------------------------------------");
+        System.out.println("---------------------------------------");
 
-		System.out.println("INPUT: " + "\"" + S2 + "\"");
-		System.out.println("OUTPUT: " + x.isPalindrome(S2));
+        System.out.println("INPUT: " + "\"" + S2 + "\"");
+        System.out.println("OUTPUT: " + x.isPalindrome(S2));
 
-		System.out.println("---------------------------------------");
+        System.out.println("---------------------------------------");
 
-		System.out.println("INPUT: " + "\"" + S3 + "\"");
-		System.out.println("OUTPUT: " + x.isPalindrome(S3));
-	}
+        System.out.println("INPUT: " + "\"" + S3 + "\"");
+        System.out.println("OUTPUT: " + x.isPalindrome(S3));
+    }
 
-	public boolean isPalindrome(String s) {
-		s = s.replaceAll("\\W|_", "").toLowerCase();
-		
-		System.out.println("\"" + s + "\"" + " is palindrome?");
+    public boolean isPalindrome(String s) {
+        s = s.replaceAll("\\W|_", "").toLowerCase();
 
-		StringBuilder builder = new StringBuilder(s);
+        System.out.println("\"" + s + "\"" + " is palindrome?");
 
-		return s.equals(builder.reverse().toString());
-	}
+        StringBuilder builder = new StringBuilder(s);
+
+        return s.equals(builder.reverse().toString());
+    }
 }

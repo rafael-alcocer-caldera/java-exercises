@@ -38,24 +38,24 @@ public class StreamTest03 {
         StringBuilder builder = new StringBuilder();
 
         Stream<Character> characterStream = s.chars().mapToObj(c -> (char) c);
-        
+
         Stream<Character> reverse = reverse(characterStream);
         reverse.forEach(c -> builder.append(c));
-        
+
         if (s.equals(builder.toString())) {
             return true;
         }
-        
+
         return false;
     }
-    
+
     public void go4() {
-       LinkedList<String> l = new LinkedList<>();
-       l.push("1");
-       l.push("2");
-       l.push("3");
-       
-       l.stream().forEach(System.out::println);
+        LinkedList<String> l = new LinkedList<>();
+        l.push("1");
+        l.push("2");
+        l.push("3");
+
+        l.stream().forEach(System.out::println);
     }
 
     public static <T> Stream<T> reverse(Stream<T> stream) {

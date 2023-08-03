@@ -34,41 +34,40 @@ import java.util.stream.Collectors;
  */
 public class Exercise30Stream {
 
-	private static final String[] ARRAY = { "six", "one", "two", "three", "one", "six", "five", "six", "one", "six" };
+    private static final String[] ARRAY = { "six", "one", "two", "three", "one", "six", "five", "six", "one", "six" };
 
-	public static void main(String[] args) {
-		Exercise30Stream x = new Exercise30Stream();
-		
-		System.out.println("Count the number of occurrences of words in an array Old School");
-		System.out.println("---------------------------------------------------------------");
-		x.goOldSchool(ARRAY);
-		
-		System.out.println("");
-		
-		System.out.println("Count the number of occurrences of words in an array New School");
-		System.out.println("---------------------------------------------------------------");
-		x.goNewSchool(ARRAY);
-	}
-	
-	public void goOldSchool(String[] array) {
-		Map<String, Integer> map = new HashMap<>();
-		
-		for (int i = 0; i < array.length; i++) {
-			if (map.containsKey(array[i])) {
-				map.put(array[i], map.get(array[i]) + 1);
-			} else {
-				map.put(array[i], 1);
-			}
-		}
-		
-		System.out.println(map);
-	}
+    public static void main(String[] args) {
+        Exercise30Stream x = new Exercise30Stream();
 
-	public void goNewSchool(String[] array) {
-		Map<String, Long> map = Arrays.asList(array)
-				.stream()
-				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println("Count the number of occurrences of words in an array Old School");
+        System.out.println("---------------------------------------------------------------");
+        x.goOldSchool(ARRAY);
 
-		System.out.println(map);
-	}
+        System.out.println("");
+
+        System.out.println("Count the number of occurrences of words in an array New School");
+        System.out.println("---------------------------------------------------------------");
+        x.goNewSchool(ARRAY);
+    }
+
+    public void goOldSchool(String[] array) {
+        Map<String, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < array.length; i++) {
+            if (map.containsKey(array[i])) {
+                map.put(array[i], map.get(array[i]) + 1);
+            } else {
+                map.put(array[i], 1);
+            }
+        }
+
+        System.out.println(map);
+    }
+
+    public void goNewSchool(String[] array) {
+        Map<String, Long> map = Arrays.asList(array).stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        System.out.println(map);
+    }
 }

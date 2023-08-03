@@ -33,14 +33,14 @@ import java.util.stream.IntStream;
  */
 public class Exercise13IntStream {
 
-	public static void main(String[] args) {
-		Exercise13IntStream x = new Exercise13IntStream();
-		x.go();
-	}
+    public static void main(String[] args) {
+        Exercise13IntStream x = new Exercise13IntStream();
+        x.go();
+    }
 
-	public void go() {
-		IntSummaryStatistics summary = IntStream.of(2, 5, 6, 99, 3).summaryStatistics();
+    public void go() {
+        IntSummaryStatistics summary = IntStream.of(2, 5, 6, 99, 3).summaryStatistics();
 
-		System.out.println(summary);
-	}
+        System.out.println(summary);
+    }
 }

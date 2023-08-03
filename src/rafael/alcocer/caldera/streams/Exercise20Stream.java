@@ -32,19 +32,19 @@ import java.util.List;
  */
 public class Exercise20Stream {
 
-	public static void main(String[] args) {
-		Exercise20Stream x = new Exercise20Stream();
-		x.go();
-	}
+    public static void main(String[] args) {
+        Exercise20Stream x = new Exercise20Stream();
+        x.go();
+    }
 
-	public void go() {
-		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
+    public void go() {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
 
-		long result = list.stream()
-				.map(num -> num * num)
-				.filter(num -> num > 20)
-				.count();
+        long result = list.stream()
+                .map(num -> num * num)
+                .filter(num -> num > 20)
+                .count();
 
-		System.out.println(result);
-	}
+        System.out.println(result);
+    }
 }

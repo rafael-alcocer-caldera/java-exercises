@@ -30,16 +30,16 @@ import java.util.stream.Stream;
  */
 public class Exercise32Stream {
 
-	public static void main(String[] args) {
-		Exercise32Stream x = new Exercise32Stream();
-		x.go();
-	}
+    public static void main(String[] args) {
+        Exercise32Stream x = new Exercise32Stream();
+        x.go();
+    }
 
-	public void go() {
-		double d = Stream.of(7.3, 5.2, 8.8)
-				.reduce(0.0, (o1, o2) -> o1 + o2)
-				.doubleValue();
+    public void go() {
+        double d = Stream.of(7.3, 5.2, 8.8)
+                .reduce(0.0, (o1, o2) -> o1 + o2)
+                .doubleValue();
 
-		System.out.println(d);
-	}
+        System.out.println(d);
+    }
 }

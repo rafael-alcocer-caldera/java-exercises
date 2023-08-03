@@ -24,21 +24,21 @@ import java.util.stream.IntStream;
  */
 public class Exercise12IntStream {
 
-	public static void main(String[] args) {
-		Exercise12IntStream x = new Exercise12IntStream();
-		x.go();
-	}
+    public static void main(String[] args) {
+        Exercise12IntStream x = new Exercise12IntStream();
+        x.go();
+    }
 
-	/**
-	 * Sum numbers from 1 to 4.
-	 * 
-	 * 1 + 2 + 3 + 4
-	 * 
-	 * Result: 10
-	 */
-	public void go() {
-		System.out.println(IntStream.range(1, 5).sum());
-		
-		System.out.println(IntStream.rangeClosed(1, 4).sum());
-	}
+    /**
+     * Sum numbers from 1 to 4.
+     * 
+     * 1 + 2 + 3 + 4
+     * 
+     * Result: 10
+     */
+    public void go() {
+        System.out.println(IntStream.range(1, 5).sum());
+
+        System.out.println(IntStream.rangeClosed(1, 4).sum());
+    }
 }

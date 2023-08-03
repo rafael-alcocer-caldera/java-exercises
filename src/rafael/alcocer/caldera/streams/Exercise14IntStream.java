@@ -27,42 +27,41 @@ import java.util.stream.IntStream;
  */
 public class Exercise14IntStream {
 
-	private static final int[] NUMBERS = { 100, 50, 56, 22, 3, 66 };
+    private static final int[] NUMBERS = { 100, 50, 56, 22, 3, 66 };
 
-	public static void main(String[] args) {
-		Exercise14IntStream x = new Exercise14IntStream();
-		
-		x.getMinimumNumberFromArrayOldSchool(NUMBERS);
-		
-		System.out.println("-----");
-		
-		x.getMinimumNumberFromArrayNewSchool(NUMBERS);
-		
-		System.out.println("-----");
-		
-		System.out.println(x.getMinimumNumberFromArrayNewSchool2(NUMBERS).getMin());
-	}
+    public static void main(String[] args) {
+        Exercise14IntStream x = new Exercise14IntStream();
 
-	public void getMinimumNumberFromArrayOldSchool(int[] numbers) {
-		int minNumber = numbers[0];
+        x.getMinimumNumberFromArrayOldSchool(NUMBERS);
 
-		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] < minNumber) {
-				minNumber = numbers[i];
-			}
-		}
+        System.out.println("-----");
 
-		System.out.println(minNumber);
-	}
+        x.getMinimumNumberFromArrayNewSchool(NUMBERS);
 
-	public void getMinimumNumberFromArrayNewSchool(int[] numbers) {
-		IntStream.of(numbers)
-			.min()
-			.ifPresent(System.out::println);
-	}
-	
-	public IntSummaryStatistics getMinimumNumberFromArrayNewSchool2(int[] numbers) {
-		return IntStream.of(numbers)
-				.summaryStatistics();
-	}
+        System.out.println("-----");
+
+        System.out.println(x.getMinimumNumberFromArrayNewSchool2(NUMBERS).getMin());
+    }
+
+    public void getMinimumNumberFromArrayOldSchool(int[] numbers) {
+        int minNumber = numbers[0];
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < minNumber) {
+                minNumber = numbers[i];
+            }
+        }
+
+        System.out.println(minNumber);
+    }
+
+    public void getMinimumNumberFromArrayNewSchool(int[] numbers) {
+        IntStream.of(numbers)
+            .min()
+            .ifPresent(System.out::println);
+    }
+
+    public IntSummaryStatistics getMinimumNumberFromArrayNewSchool2(int[] numbers) {
+        return IntStream.of(numbers).summaryStatistics();
+    }
 }

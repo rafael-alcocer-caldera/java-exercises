@@ -21,25 +21,25 @@ import java.util.Arrays;
  * From a list of names, give me the total number of letters in all the names
  * with more than 5 letters.
  * 
- * INPUT: { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney",
-			"Hubert" }
+ * INPUT: { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda",
+ * "Courtney", "Hubert" }
  * 
  * OUTPUT: 34
  */
 public class Exercise03ArraysStream {
 
-	private static final String[] NAMES = { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney",
-			"Hubert" };
+    private static final String[] NAMES = { "Steve", "Svetlana", "sara", "John", "paul", "Ramiro", "Amanda", "Courtney",
+            "Hubert" };
 
-	public static void main(String[] args) {
-		Exercise03ArraysStream x = new Exercise03ArraysStream();
-		System.out.println(x.go(NAMES));
-	}
+    public static void main(String[] args) {
+        Exercise03ArraysStream x = new Exercise03ArraysStream();
+        System.out.println(x.go(NAMES));
+    }
 
-	public int go(String[] names) {
-		return Arrays.stream(names)
-				.filter(name -> name.length() > 5)
-				.mapToInt(name -> name.length())
-				.sum();
-	}
+    public int go(String[] names) {
+        return Arrays.stream(names)
+                .filter(name -> name.length() > 5)
+                .mapToInt(name -> name.length())
+                .sum();
+    }
 }

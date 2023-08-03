@@ -101,35 +101,33 @@ public class Exercise29Stream {
 
     public void go() {
         List<Employee> employees = generateEmployees();
-        
+
         employees.stream()
-            .collect(Collectors.groupingBy(Employee::getDeptId))
-            .entrySet()
-            .stream()
-            .map(entry -> entry.getValue().stream().max(Comparator.comparingDouble(Employee::getSalary)).get())
-            .collect(Collectors.toList())
-            .stream()
-            .forEach(System.out::println);
+                .collect(Collectors.groupingBy(Employee::getDeptId))
+                .entrySet()
+                .stream()
+                .map(entry -> entry.getValue().stream().max(Comparator.comparingDouble(Employee::getSalary)).get())
+                .collect(Collectors.toList()).stream().forEach(System.out::println);
     }
-    
+
     public void go2() {
         List<Employee> employees = generateEmployees();
-        
+
         Map<Integer, Optional<Employee>> map = employees.stream()
-            .collect(Collectors.groupingBy(Employee::getDeptId, Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
-        
+                .collect(Collectors.groupingBy(Employee::getDeptId, Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
+
         System.out.println(map);
     }
 
     public List<Employee> generateEmployees() {
-		// int id, String name, int deptid, double salary, String status
-		Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
-		Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
-		Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
-		Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
-		Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
-		Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
+        // int id, String name, int deptid, double salary, String status
+        Employee e1 = new Employee(1, "Emp1", 100, 50000.60, "active");
+        Employee e2 = new Employee(2, "Emp2", 100, 30500.75, "inactive");
+        Employee e3 = new Employee(3, "Emp3", 300, 45500.85, "inactive");
+        Employee e4 = new Employee(4, "Emp4", 300, 75500.30, "active");
+        Employee e5 = new Employee(5, "Emp5", 500, 88500.45, "active");
+        Employee e6 = new Employee(6, "Emp6", 100, 22690.33, "active");
 
-		return Arrays.asList(e1, e2, e3, e4, e5, e6);
-	}
+        return Arrays.asList(e1, e2, e3, e4, e5, e6);
+    }
 }

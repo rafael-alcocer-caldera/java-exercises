@@ -37,64 +37,64 @@ import java.util.Map;
  */
 public class Exercise02AnagramDeclarativeAndImperativeProgramming {
 
-	private static final String S1 = "deudora";
-	private static final String S2 = "eduardo";
-	private static final String S3 = "funeral";
-	private static final String S4 = "real      fun";
+    private static final String S1 = "deudora";
+    private static final String S2 = "eduardo";
+    private static final String S3 = "funeral";
+    private static final String S4 = "real      fun";
 
-	public static void main(String[] args) {
-		Exercise02AnagramDeclarativeAndImperativeProgramming x = new Exercise02AnagramDeclarativeAndImperativeProgramming();
-		x.isAnagram(S1, S2);
-		System.out.println("####################################################");
-		x.isAnagram(S3, S4);
-		System.out.println("####################################################");
-		x.isAnagram(S1, S3);
-		System.out.println("####################################################");
-	}
+    public static void main(String[] args) {
+        Exercise02AnagramDeclarativeAndImperativeProgramming x = new Exercise02AnagramDeclarativeAndImperativeProgramming();
+        x.isAnagram(S1, S2);
+        System.out.println("####################################################");
+        x.isAnagram(S3, S4);
+        System.out.println("####################################################");
+        x.isAnagram(S1, S3);
+        System.out.println("####################################################");
+    }
 
-	/**
-	 * This solution is a mixed of Old School (Imperative Programming) and New
-	 * School (Java Streams, (Declarative Programming).
-	 * 
-	 * @param s1
-	 * @param s2
-	 * @return
-	 */
-	public boolean isAnagram(String s1, String s2) {
-		System.out.println("##### \"" + s1 + "\" is Anagram of \"" + s2 + "\" ?");
-		
-		Map<Character, Integer> map1 = new HashMap<>();
-		Map<Character, Integer> map2 = new HashMap<>();
+    /**
+     * This solution is a mixed of Old School (Imperative Programming) and New
+     * School (Java Streams, (Declarative Programming).
+     * 
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public boolean isAnagram(String s1, String s2) {
+        System.out.println("##### \"" + s1 + "\" is Anagram of \"" + s2 + "\" ?");
 
-		s1.chars().mapToObj(c -> (char) c).forEach(c -> {
-			if (Character.isSpaceChar(c)) {
-				return;
-			}
+        Map<Character, Integer> map1 = new HashMap<>();
+        Map<Character, Integer> map2 = new HashMap<>();
 
-			if (map1.containsKey(c)) {
-				map1.put(c, map1.get(c) + 1);
-			} else {
-				map1.put(c, 1);
-			}
-		});
+        s1.chars().mapToObj(c -> (char) c).forEach(c -> {
+            if (Character.isSpaceChar(c)) {
+                return;
+            }
 
-		s2.chars().mapToObj(c -> (char) c).forEach(c -> {
-			if (Character.isSpaceChar(c)) {
-				return;
-			}
+            if (map1.containsKey(c)) {
+                map1.put(c, map1.get(c) + 1);
+            } else {
+                map1.put(c, 1);
+            }
+        });
 
-			if (map2.containsKey(c)) {
-				map2.put(c, map2.get(c) + 1);
-			} else {
-				map2.put(c, 1);
-			}
-		});
+        s2.chars().mapToObj(c -> (char) c).forEach(c -> {
+            if (Character.isSpaceChar(c)) {
+                return;
+            }
 
-		System.out.println("##### map1: " + map1);
-		System.out.println("##### map2: " + map2);
-		System.out.println("##### map1.equals(map2): " + map1.equals(map2));
-		System.out.println("");
+            if (map2.containsKey(c)) {
+                map2.put(c, map2.get(c) + 1);
+            } else {
+                map2.put(c, 1);
+            }
+        });
 
-		return map1.equals(map2);
-	}
+        System.out.println("##### map1: " + map1);
+        System.out.println("##### map2: " + map2);
+        System.out.println("##### map1.equals(map2): " + map1.equals(map2));
+        System.out.println("");
+
+        return map1.equals(map2);
+    }
 }

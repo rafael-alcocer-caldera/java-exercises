@@ -27,34 +27,34 @@ import java.util.Arrays;
  */
 public class CheckDuplicatesSorting {
 
-	private static final int[] NUMS1 = { 8, 1, 13, 15, 7 };
-	private static final int[] NUMS2 = { 8, 1, 13, 15, 7, 15 };
+    private static final int[] NUMS1 = { 8, 1, 13, 15, 7 };
+    private static final int[] NUMS2 = { 8, 1, 13, 15, 7, 15 };
 
-	public static void main(String[] args) {
-		CheckDuplicatesSorting x = new CheckDuplicatesSorting();
-		x.checkDuplicates(NUMS1);
-		System.out.println("");
-		x.checkDuplicates(NUMS2);
-	}
+    public static void main(String[] args) {
+        CheckDuplicatesSorting x = new CheckDuplicatesSorting();
+        x.checkDuplicates(NUMS1);
+        System.out.println("");
+        x.checkDuplicates(NUMS2);
+    }
 
-	/**
-	 * Time Complexity: O(nlogn), for sorting (assuming nlogn sorting algorithm).
-	 * 
-	 * Space Complexity: O(1).
-	 * 
-	 * @param nums
-	 */
-	public void checkDuplicates(int[] nums) {
-		Arrays.sort(nums);
+    /**
+     * Time Complexity: O(nlogn), for sorting (assuming nlogn sorting algorithm).
+     * 
+     * Space Complexity: O(1).
+     * 
+     * @param nums
+     */
+    public void checkDuplicates(int[] nums) {
+        Arrays.sort(nums);
 
-		for (int i = 0; i < nums.length - 1; i++) {
-			if (nums[i] == nums[i + 1]) {
-				System.out.println("Duplicates: " + nums[i] + " <=> " + nums[i + 1]);
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                System.out.println("Duplicates: " + nums[i] + " <=> " + nums[i + 1]);
 
-				return;
-			}
-		}
+                return;
+            }
+        }
 
-		System.out.println("No duplicates");
-	}
+        System.out.println("No duplicates");
+    }
 }

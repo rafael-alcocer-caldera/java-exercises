@@ -35,17 +35,17 @@ import java.util.Arrays;
  */
 public class Exercise02ArraysStream {
 
-	private static final int[] NUMBERS = { 2, 4, 6, 8, 10 };
+    private static final int[] NUMBERS = { 2, 4, 6, 8, 10 };
 
-	public static void main(String[] args) {
-		Exercise02ArraysStream x = new Exercise02ArraysStream();
-		x.go(NUMBERS);
-	}
+    public static void main(String[] args) {
+        Exercise02ArraysStream x = new Exercise02ArraysStream();
+        x.go(NUMBERS);
+    }
 
-	public void go(int[] numbers) {
-		Arrays.stream(numbers)
-			.map(number -> number * number)
-			.average()
-			.ifPresent(System.out::println);
-	}
+    public void go(int[] numbers) {
+        Arrays.stream(numbers)
+              .map(number -> number * number)
+              .average()
+              .ifPresent(System.out::println);
+    }
 }

@@ -66,29 +66,32 @@ package rafael.alcocer.caldera.top.interview.questions.string;
  */
 public class ReverseInteger {
 
-	private static final int X = -123;
+    private static final int X = -123;
 
-	public static void main(String[] args) {
-		ReverseInteger x = new ReverseInteger();
+    public static void main(String[] args) {
+        ReverseInteger x = new ReverseInteger();
 
-		System.out.println("INPUT: " + X);
-		System.out.println("OUTPUT: " + x.reverse(X));
+        System.out.println("INPUT: " + X);
+        System.out.println("OUTPUT: " + x.reverse(X));
 
-		System.out.println("");
+        System.out.println("");
 
-		System.out.println("INPUT: " + Integer.MAX_VALUE);
-		System.out.println("OUTPUT: " + x.reverse(Integer.MAX_VALUE));
-	}
+        System.out.println("INPUT: " + Integer.MAX_VALUE);
+        System.out.println("OUTPUT: " + x.reverse(Integer.MAX_VALUE));
+    }
 
-	public int reverse(int x) {
-		try {
-			if (x < 0) {
-				return Math.negateExact(Integer.parseInt(new StringBuilder(String.valueOf(Math.abs(x))).reverse().toString()));
-			}
+    public int reverse(int x) {
+        try {
+            if (x < 0) {
+                return Math.negateExact(
+                        Integer.parseInt(new StringBuilder(String.valueOf(Math.abs(x)))
+                                .reverse()
+                                .toString()));
+            }
 
-			return Integer.parseInt(new StringBuilder(String.valueOf(x)).reverse().toString());
-		} catch (NumberFormatException ex) {
-			return 0;
-		}
-	}
+            return Integer.parseInt(new StringBuilder(String.valueOf(x)).reverse().toString());
+        } catch (NumberFormatException ex) {
+            return 0;
+        }
+    }
 }

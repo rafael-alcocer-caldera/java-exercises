@@ -64,64 +64,64 @@ import java.util.Arrays;
  */
 public class RotateArray {
 
-	private static final int[] NUMS1 = { 8, 1, 13, 15, 7 };
-	private static final int[] NUMS2 = { 2, 7, 11, 15 };
-	private static final int[] NUMS3 = { 3, 2, 4 };
-	private static final int[] NUMS4 = { 1, 2, 3, 4, 5, 6, 7 };
-	private static final int[] NUMS5 = { -1, -100, 3, 99 };
+    private static final int[] NUMS1 = { 8, 1, 13, 15, 7 };
+    private static final int[] NUMS2 = { 2, 7, 11, 15 };
+    private static final int[] NUMS3 = { 3, 2, 4 };
+    private static final int[] NUMS4 = { 1, 2, 3, 4, 5, 6, 7 };
+    private static final int[] NUMS5 = { -1, -100, 3, 99 };
 
-	public static void main(String[] args) {
-		RotateArray x = new RotateArray();
+    public static void main(String[] args) {
+        RotateArray x = new RotateArray();
 
-		// [8,1,13,15,7] -> [7,8,1,13,15]
-		System.out.println("INPUT: " + Arrays.toString(NUMS1));
-		System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS1, 1)));
+        // [8,1,13,15,7] -> [7,8,1,13,15]
+        System.out.println("INPUT: " + Arrays.toString(NUMS1));
+        System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS1, 1)));
 
-		System.out.println("");
+        System.out.println("");
 
-		// [2,7,11,15] -> [15,2,7,11] -> [11,15,2,7] -> [7,11,15,2]
-		System.out.println("INPUT: " + Arrays.toString(NUMS2));
-		System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS2, 3)));
+        // [2,7,11,15] -> [15,2,7,11] -> [11,15,2,7] -> [7,11,15,2]
+        System.out.println("INPUT: " + Arrays.toString(NUMS2));
+        System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS2, 3)));
 
-		System.out.println("");
+        System.out.println("");
 
-		// [3,2,4] -> [4,3,2] -> [2,4,3]
-		System.out.println("INPUT: " + Arrays.toString(NUMS3));
-		System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS3, 2)));
+        // [3,2,4] -> [4,3,2] -> [2,4,3]
+        System.out.println("INPUT: " + Arrays.toString(NUMS3));
+        System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS3, 2)));
 
-		System.out.println("");
+        System.out.println("");
 
-		// [1,2,3,4,5,6,7] -> [7,1,2,3,4,5,6] -> [6,7,1,2,3,4,5] -> [5,6,7,1,2,3,4]
-		System.out.println("INPUT: " + Arrays.toString(NUMS4));
-		System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS4, 3)));
+        // [1,2,3,4,5,6,7] -> [7,1,2,3,4,5,6] -> [6,7,1,2,3,4,5] -> [5,6,7,1,2,3,4]
+        System.out.println("INPUT: " + Arrays.toString(NUMS4));
+        System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS4, 3)));
 
-		System.out.println("");
+        System.out.println("");
 
-		// [-1,-100,3,99] -> [99,-1,-100,3] -> [3,99,-1,-100]
-		System.out.println("INPUT: " + Arrays.toString(NUMS5));
-		System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS5, 2)));
-	}
+        // [-1,-100,3,99] -> [99,-1,-100,3] -> [3,99,-1,-100]
+        System.out.println("INPUT: " + Arrays.toString(NUMS5));
+        System.out.println("OUTPUT: " + Arrays.toString(x.rotate(NUMS5, 2)));
+    }
 
-	public int[] rotate(int[] nums, int k) {
-		if (k < 0 || k > Math.pow(10, 5) || nums.length < 1 || nums.length > Math.pow(10, 5)) {
-			return new int[] {};
-		}
+    public int[] rotate(int[] nums, int k) {
+        if (k < 0 || k > Math.pow(10, 5) || nums.length < 1 || nums.length > Math.pow(10, 5)) {
+            return new int[] {};
+        }
 
-		int temp[] = Arrays.copyOf(nums, nums.length);
+        int temp[] = Arrays.copyOf(nums, nums.length);
 
-		for (int i = 0; i < k; i++) {
-			for (int j = 0; j < nums.length; j++) {
-				if (j == 0) {
-					temp[j] = nums[nums.length - 1];
-					continue;
-				}
+        for (int i = 0; i < k; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if (j == 0) {
+                    temp[j] = nums[nums.length - 1];
+                    continue;
+                }
 
-				temp[j] = nums[j - 1];
-			}
+                temp[j] = nums[j - 1];
+            }
 
-			nums = Arrays.copyOf(temp, temp.length);
-		}
+            nums = Arrays.copyOf(temp, temp.length);
+        }
 
-		return nums;
-	}
+        return nums;
+    }
 }

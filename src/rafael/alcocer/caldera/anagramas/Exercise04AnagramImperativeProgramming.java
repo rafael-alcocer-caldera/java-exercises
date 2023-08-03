@@ -40,34 +40,34 @@ import java.util.Set;
  */
 public class Exercise04AnagramImperativeProgramming {
 
-	private static final String[] STRING_ARRAY = { "eat", "tea", "funeral", "raza", "frog", "elvis", "real      fun",
-			"lives", "deudora", "dog", "ate", "eduardo", "zara" };
+    private static final String[] STRING_ARRAY = { "eat", "tea", "funeral", "raza", "frog", "elvis", "real      fun",
+            "lives", "deudora", "dog", "ate", "eduardo", "zara" };
 
-	public static void main(String[] args) {
-		Exercise04AnagramImperativeProgramming x = new Exercise04AnagramImperativeProgramming();
-		x.findAnagrams(STRING_ARRAY);
-	}
+    public static void main(String[] args) {
+        Exercise04AnagramImperativeProgramming x = new Exercise04AnagramImperativeProgramming();
+        x.findAnagrams(STRING_ARRAY);
+    }
 
-	public Set<String> findAnagrams(String[] stringArray) {
-		Exercise01AnagramImperativeProgramming exercise01 = new Exercise01AnagramImperativeProgramming();
-		Set<String> set = new HashSet<>();
+    public Set<String> findAnagrams(String[] stringArray) {
+        Exercise01AnagramImperativeProgramming exercise01 = new Exercise01AnagramImperativeProgramming();
+        Set<String> set = new HashSet<>();
 
-		for (int i = 0; i < stringArray.length; i++) {
-			for (int j = 0; j < stringArray.length; j++) {
-				// Skip the same word
-				if (i == j) {
-					continue;
-				}
+        for (int i = 0; i < stringArray.length; i++) {
+            for (int j = 0; j < stringArray.length; j++) {
+                // Skip the same word
+                if (i == j) {
+                    continue;
+                }
 
-				if (exercise01.isAnagram(stringArray[i], stringArray[j])) {
-					set.add(stringArray[i]);
-					set.add(stringArray[j]);
-				}
-			}
-		}
+                if (exercise01.isAnagram(stringArray[i], stringArray[j])) {
+                    set.add(stringArray[i]);
+                    set.add(stringArray[j]);
+                }
+            }
+        }
 
-		System.out.println(set);
+        System.out.println(set);
 
-		return set;
-	}
+        return set;
+    }
 }

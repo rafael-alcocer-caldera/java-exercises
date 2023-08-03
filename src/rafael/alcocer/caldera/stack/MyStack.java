@@ -25,67 +25,60 @@ import java.util.Arrays;
  * 
  * So, when we add elements, the last element added is the first in the stack.
  * 
- * Example:
- * 20
- * 15
- * 10
+ * Example: 20 15 10
  * 
  * push(25);
  * 
- * The resultant stack will be:
- * 25
- * 20
- * 15
- * 10
+ * The resultant stack will be: 25 20 15 10
  */
 public class MyStack {
 
-	private Object[] stack;
+    private Object[] stack;
 
-	public MyStack() {
-		stack = new Object[1];
-	}
+    public MyStack() {
+        stack = new Object[1];
+    }
 
-	public MyStack(Object data) {
-		stack = new Object[1];
-		stack[0] = data;
-	}
+    public MyStack(Object data) {
+        stack = new Object[1];
+        stack[0] = data;
+    }
 
-	public MyStack(int capacity) {
-		if (capacity > 0) {
-			stack = new Object[capacity];
-		} else {
-			stack = new Object[1];
-		}
-	}
+    public MyStack(int capacity) {
+        if (capacity > 0) {
+            stack = new Object[capacity];
+        } else {
+            stack = new Object[1];
+        }
+    }
 
-	public Object[] push(Object data) {
-		Object[] copiedArray = Arrays.copyOf(getStack(), getStack().length + 1);
-		copiedArray[0] = data;
-		int index = 0;
+    public Object[] push(Object data) {
+        Object[] copiedArray = Arrays.copyOf(getStack(), getStack().length + 1);
+        copiedArray[0] = data;
+        int index = 0;
 
-		for (int i = 0; i < copiedArray.length - 1; i++) {
-			copiedArray[++index] = getStack()[i];
-		}
+        for (int i = 0; i < copiedArray.length - 1; i++) {
+            copiedArray[++index] = getStack()[i];
+        }
 
-		setStack(copiedArray);
+        setStack(copiedArray);
 
-		return getStack();
-	}
+        return getStack();
+    }
 
-	public void pop() {
-		Object[] array = getStack();
+    public void pop() {
+        Object[] array = getStack();
 
-		for (int i = 0; i < array.length; i++) {
-			System.out.println("##### array[" + i + "]: " + array[i]);
-		}
-	}
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("##### array[" + i + "]: " + array[i]);
+        }
+    }
 
-	public Object[] getStack() {
-		return stack;
-	}
+    public Object[] getStack() {
+        return stack;
+    }
 
-	public void setStack(Object[] stack) {
-		this.stack = stack;
-	}
+    public void setStack(Object[] stack) {
+        this.stack = stack;
+    }
 }

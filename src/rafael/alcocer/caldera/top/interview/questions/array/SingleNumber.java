@@ -56,83 +56,76 @@ import java.util.stream.Collectors;
  */
 public class SingleNumber {
 
-	private static final int[] NUMS1 = { 2, 2, 1 };
-	private static final int[] NUMS2 = { 4, 1, 2, 1, 2 };
-	private static final int[] NUMS3 = { 1 };
+    private static final int[] NUMS1 = { 2, 2, 1 };
+    private static final int[] NUMS2 = { 4, 1, 2, 1, 2 };
+    private static final int[] NUMS3 = { 1 };
 
-	public static void main(String[] args) {
-		SingleNumber x = new SingleNumber();
-		
-		System.out.println("Single Number Old School");
-		System.out.println("------------------------");
-		
-		System.out.println("INPUT: " + Arrays.toString(NUMS1));
-		System.out.println("OUTPUT: " + x.singleNumberOldSchool(NUMS1));
-		
-		System.out.println("");
-		
-		System.out.println("INPUT: " + Arrays.toString(NUMS2));
-		System.out.println("OUTPUT: " + x.singleNumberOldSchool(NUMS2));
-		
-		System.out.println("");
-		
-		System.out.println("INPUT: " + Arrays.toString(NUMS3));
-		System.out.println("OUTPUT: " + x.singleNumberOldSchool(NUMS3));
-		
-		System.out.println("");
-		
-		System.out.println("Single Number New School");
-		System.out.println("------------------------");
-		
-		System.out.println("INPUT: " + Arrays.toString(NUMS1));
-		System.out.println("OUTPUT: " + x.singleNumberNewSchool(NUMS1));
-		
-		System.out.println("");
-		
-		System.out.println("INPUT: " + Arrays.toString(NUMS2));
-		System.out.println("OUTPUT: " + x.singleNumberNewSchool(NUMS2));
+    public static void main(String[] args) {
+        SingleNumber x = new SingleNumber();
 
-		System.out.println("");
-		
-		System.out.println("INPUT: " + Arrays.toString(NUMS3));
-		System.out.println("OUTPUT: " + x.singleNumberNewSchool(NUMS3));
-	}
+        System.out.println("Single Number Old School");
+        System.out.println("------------------------");
 
-	public int singleNumberOldSchool(int[] nums) {
-		Map<Integer, Integer> map = new HashMap<>();
-		
-		for (int i = 0; i < nums.length; i++) {
-			if (map.containsKey(nums[i])) {
-				map.put(nums[i], map.get(nums[i]) + 1);
-				
-				continue;
-			}
-			
-			map.put(nums[i], 1);
-		}
-		
-		Set<Entry<Integer, Integer>> set = map.entrySet();
-		int result = 0;
-		
-		for (Entry<Integer, Integer> entry: set) {
-			if (entry.getValue() == 1) {
-				return result = entry.getKey();
-			}
-		}
-		
-		return result;
-	}
-	
-	public int singleNumberNewSchool(int[] nums) {
-		return Arrays.stream(nums)
-			.boxed()
-			.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-			.entrySet()
-			.stream()
-			.filter(entry -> entry.getValue() == 1)
-			.findFirst()
-			.map(m -> m.getKey())
-			.orElseGet(() -> 0)
-			.intValue();
-	}
+        System.out.println("INPUT: " + Arrays.toString(NUMS1));
+        System.out.println("OUTPUT: " + x.singleNumberOldSchool(NUMS1));
+
+        System.out.println("");
+
+        System.out.println("INPUT: " + Arrays.toString(NUMS2));
+        System.out.println("OUTPUT: " + x.singleNumberOldSchool(NUMS2));
+
+        System.out.println("");
+
+        System.out.println("INPUT: " + Arrays.toString(NUMS3));
+        System.out.println("OUTPUT: " + x.singleNumberOldSchool(NUMS3));
+
+        System.out.println("");
+
+        System.out.println("Single Number New School");
+        System.out.println("------------------------");
+
+        System.out.println("INPUT: " + Arrays.toString(NUMS1));
+        System.out.println("OUTPUT: " + x.singleNumberNewSchool(NUMS1));
+
+        System.out.println("");
+
+        System.out.println("INPUT: " + Arrays.toString(NUMS2));
+        System.out.println("OUTPUT: " + x.singleNumberNewSchool(NUMS2));
+
+        System.out.println("");
+
+        System.out.println("INPUT: " + Arrays.toString(NUMS3));
+        System.out.println("OUTPUT: " + x.singleNumberNewSchool(NUMS3));
+    }
+
+    public int singleNumberOldSchool(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                map.put(nums[i], map.get(nums[i]) + 1);
+
+                continue;
+            }
+
+            map.put(nums[i], 1);
+        }
+
+        Set<Entry<Integer, Integer>> set = map.entrySet();
+        int result = 0;
+
+        for (Entry<Integer, Integer> entry : set) {
+            if (entry.getValue() == 1) {
+                return result = entry.getKey();
+            }
+        }
+
+        return result;
+    }
+
+    public int singleNumberNewSchool(int[] nums) {
+        return Arrays.stream(nums).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream().filter(entry -> entry.getValue() == 1).findFirst().map(m -> m.getKey())
+                .orElseGet(() -> 0).intValue();
+    }
 }

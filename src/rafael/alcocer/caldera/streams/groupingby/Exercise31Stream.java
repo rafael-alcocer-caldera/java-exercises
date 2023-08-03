@@ -32,18 +32,18 @@ import java.util.stream.Collectors;
  */
 public class Exercise31Stream {
 
-	private static final String WORD = "abcdekyrfadcelmaaafdghjkdsda";
+    private static final String WORD = "abcdekyrfadcelmaaafdghjkdsda";
 
-	public static void main(String[] args) {
-		Exercise31Stream x = new Exercise31Stream();
-		x.go(WORD);
-	}
+    public static void main(String[] args) {
+        Exercise31Stream x = new Exercise31Stream();
+        x.go(WORD);
+    }
 
-	public void go(String word) {
-		Map<Character, Long> map = word.chars()
-				.mapToObj(c -> (char) c)
-				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    public void go(String word) {
+        Map<Character, Long> map = word.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-		System.out.println(map);
-	}
+        System.out.println(map);
+    }
 }
