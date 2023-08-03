@@ -1,8 +1,8 @@
 /target/
-.settings/org.eclipse.m2e.core.prefs
-.settings/org.eclipse.jdt.core.prefs
-.settings/org.eclipse.core.resources.prefs
+/bin/
+.settings/*
 .project
 .classpath
 .*DS_Store*
-/bin/
+*.prefs
+*.prefs
