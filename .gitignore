@@ -1,8 +1,18 @@
-/target/
-/bin/
-.settings/*
-.project
+# Eclipse
 .classpath
-.*DS_Store*
-*.prefs
-*.prefs
+.factorypath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+bin/
