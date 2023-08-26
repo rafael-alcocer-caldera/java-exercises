@@ -638,6 +638,41 @@ I wanted to have a series of exercises that are asked in interviews.
 
 ***
 
+- MergeArrays
+    - Given an array of arrays of integer nums, merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+      - Example 1:
+        - Input: 
+            - nums = { {1,3}, {2,6}, {8,10}, {15,18} } 
+        - Output: 
+            - { {1,6}, {8,10}, {15,18} } 
+      - Example 2:
+        - Input: 
+            - nums = { {1,3}, {4,10}, {6,12}, {11,18} }
+        - Output: 
+            - { {1,3}, {4,18} } 
+      - Example 3:
+        - Input: 
+            - nums = { { 1, 4 }, { 4, 5 } }
+        - Output: 
+            - { { 1, 5 }}
+      - Example 4:
+        - Input: 
+            - nums = { { 1, 4 }, { 0, 1 } }
+        - Output: 
+            - {{ 0, 4 }}
+      - Example 5:
+        - Input: 
+            - nums = { { 1, 4 }, { 2, 3 } }
+        - Output: 
+            - { { 1, 4 } }
+      - Example 6:
+        - Input: 
+            - nums = { {2,3}, {4,5}, {6,7}, {8,9}, {1,10} }
+        - Output: 
+            - { {1,10} }
+
+***
+
 - RemoveDuplicatesFromSortedArray
     - Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements. Return k after placing the final result in the first k slots of nums. Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
       - Example 1:
