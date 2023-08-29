@@ -101,7 +101,7 @@ public class Exercise33Stream {
         List<Employee> employees = generateEmployees();
 
         Map<Boolean, List<Employee>> map = employees.stream()
-                .collect(Collectors.partitioningBy(employe -> employe.getStatus().equals("active")));
+                .collect(Collectors.partitioningBy(employe -> "active".equals(employe.getStatus())));
 
         System.out.println(map);
     }
