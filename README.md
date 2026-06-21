@@ -37,7 +37,16 @@ I wanted to have a series of exercises that are asked in interviews.
            - {"eat", "tea", "funeral", "raza", "frog", "elvis", "real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun", "lives", "deudora", "dog", "ate", "eduardo", "zara"}
        - OUTPUT: 
            - [tea, ate, raza, lives, deudora, funeral, eat, real&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fun, eduardo, elvis, zara]
-    
+
+***
+
+- Exercie05AnagramGrouping
+    - Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+      - INPUT: 
+           - ["eat","tea","tan","ate","nat","bat"]
+      - OUTPUT: 
+           - [["bat"],["nat","tan"],["ate","eat","tea"]]
+
 ***
 
 - MyStackTest
