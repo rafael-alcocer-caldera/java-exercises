@@ -23,10 +23,10 @@ public class Employee {
     private double salary;
     private String status;
 
-    public Employee(int id, String name, int deptid, double salary, String status) {
+    public Employee(int id, String name, int deptId, double salary, String status) {
         this.id = id;
         this.name = name;
-        this.deptId = deptid;
+        this.deptId = deptId;
         this.salary = salary;
         this.status = status;
     }
