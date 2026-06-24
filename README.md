@@ -647,6 +647,29 @@ I wanted to have a series of exercises that are asked in interviews.
 
 ***
 
+- LargestPositiveInteger
+    - Given an integer array nums, return the largest positive integer that exists with its negative in nums. If there is no such integer, return -1. For example, if nums = [-1,2,-3,3], then 3 is the largest positive integer that exists with its negative -3 in nums.
+      - Example 1:
+        - Input: 
+            - nums = [-1,2,-3,3] 
+        - Output: 
+            - 3 
+      - Example 2:
+        - Input: 
+            - nums = [-1,10,6,7,-7,1] 
+        - Output: 
+            - 7 
+      - Example 3:
+        - Input: 
+            - nums = [-10,8,6,7,-2,-3] 
+        - Output: 
+            - -1
+      - Constraints:
+        - 1 <= nums.length <= 1000
+        - -1000 <= nums[i] <= 1000
+
+***
+
 - MergeArrays
     - Given an array of arrays of integer nums, merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
       - Example 1:
