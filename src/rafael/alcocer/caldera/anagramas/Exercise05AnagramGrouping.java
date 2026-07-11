@@ -100,12 +100,12 @@ import java.util.stream.Collectors;
  *
  * By using that map as a key, Java automatically groups the values that share the same fingerprint.
  */
-public class Exercie05AnagramGrouping {
+public class Exercise05AnagramGrouping {
 
     private static final String[] strs = {"eat","tea","tan","ate","nat","bat"};
 
     public static void main(String[] args) {
-        Exercie05AnagramGrouping x = new Exercie05AnagramGrouping();
+        Exercise05AnagramGrouping x = new Exercise05AnagramGrouping();
         System.out.println(x.groupAnagrams(strs));
     }
 
