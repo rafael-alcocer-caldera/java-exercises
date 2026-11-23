@@ -61,6 +61,16 @@ public class Exercise01Palindrome {
         System.out.println("-------------------------------");
 
         System.out.println(x.isPalindromeWithCollectionsReverse2(S2));
+
+        System.out.println("-------------------------------");
+
+        System.out.println(x.isPalindromeUsingMostOptimalWay(S1));
+
+        System.out.println("-------------------------------");
+
+        System.out.println(x.isPalindromeUsingMostOptimalWay(S2));
+
+        System.out.println("-------------------------------");
     }
 
     public boolean isPalindromeWithStringBuilder(String s) {
@@ -144,5 +154,36 @@ public class Exercise01Palindrome {
         }
 
         return false;
+    }
+
+    /**
+     * 1. Get the first and last index of the String, and assigned them to left and right
+     * 2. Create a while loop checking if left is less than right
+     * 3. Within while loop, check if char at index 0 is different to char at last index
+     *    a) If true => then return false because this is not a Palindrome
+     *    b) If false => then increment left and decrement right
+     * 4. The while loop returns to check if char at index left is different to char at index rigth and continues until finishes
+     * 5. Out of the while loop return true, meanung that the String is a Palindrome
+     *
+     * @param s
+     * @return boolean
+     */
+    public boolean isPalindromeUsingMostOptimalWay(String s) {
+        System.out.println("Palindrome using the most optimal way:");
+        System.out.println("Input String: " + s);
+
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
     }
 }
