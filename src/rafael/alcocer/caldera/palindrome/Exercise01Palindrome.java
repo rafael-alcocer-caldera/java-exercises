@@ -162,8 +162,8 @@ public class Exercise01Palindrome {
      * 3. Within while loop, check if char at index 0 is different to char at last index
      *    a) If true => then return false because this is not a Palindrome
      *    b) If false => then increment left and decrement right
-     * 4. The while loop returns to check if char at index left is different to char at index rigth and continues until finishes
-     * 5. Out of the while loop return true, meanung that the String is a Palindrome
+     * 4. The while loop returns to check if char at index left is different to char at index right and continues until finishes
+     * 5. Out of the while loop return true, meaning that the String is a Palindrome
      *
      * @param s
      * @return boolean
