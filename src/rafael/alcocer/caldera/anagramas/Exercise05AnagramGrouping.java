@@ -17,6 +17,7 @@ package rafael.alcocer.caldera.anagramas;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -102,23 +103,78 @@ import java.util.stream.Collectors;
  */
 public class Exercise05AnagramGrouping {
 
+    private static final String WORD = "abcduhgjarrr";
     private static final String[] strs = {"eat","tea","tan","ate","nat","bat"};
 
     public static void main(String[] args) {
         Exercise05AnagramGrouping x = new Exercise05AnagramGrouping();
+        System.out.println("***** collectChars *****");
+        System.out.println(x.collectChars(WORD));
+        System.out.println("---------------------------------------");
+
+        System.out.println("***** groupChars *****");
+        System.out.println(x.groupChars(WORD));
+        System.out.println("---------------------------------------");
+
+        System.out.println("***** mergeChars *****");
+        System.out.println(x.mergeChars(WORD));
+        System.out.println("---------------------------------------");
+
         System.out.println(x.groupAnagrams(strs));
     }
 
-    public Map<Character, Long> groupChars(String s) {
+    /**
+     * Counts the frequency of each character in the given string using the Stream API.
+     * <p>Best for readability and declarative style, though it incurs minor stream overhead.</p>
+     *
+     * @param s the input string to analyze
+     * @return a map where each key is a character and its value is its occurrence count
+     */
+    public Map<Character, Long> collectChars(String s) {
         return s.chars()
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
 
+    /**
+     * Counts the frequency of each character using a classic loop and {@link Map#getOrDefault}.
+     * <p>Straightforward imperative approach; performs two map lookups per character (get and put).</p>
+     *
+     * @param s the input string to analyze
+     * @return a map where each key is a character and its value is its occurrence count
+     */
+    public Map<Character, Long> groupChars(String s) {
+        Map<Character, Long> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            map.put(c, map.getOrDefault(c, 0L) + 1L);
+        }
+
+        return map;
+    }
+
+    /**
+     * Counts the frequency of each character using {@link Map#merge}.
+     * <p>Most efficient {@code Map}-based approach as it updates entries in a single lookup.</p>
+     *
+     * @param s the input string to analyze
+     * @return a map where each key is a character and its value is its occurrence count
+     */
+    public Map<Character, Long> mergeChars(String s) {
+        Map<Character, Long> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            map.merge(s.charAt(i), 1L, Long::sum);
+        }
+
+        return map;
+    }
+
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<Map<Character, Long>, List<String>> map =
                 Arrays.stream(strs)
-                        .collect(Collectors.groupingBy(this::groupChars, Collectors.toList()));
+                        .collect(Collectors.groupingBy(this::mergeChars, Collectors.toList()));
 
         return new ArrayList<>(map.values());
     }
